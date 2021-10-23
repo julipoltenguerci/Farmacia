@@ -8,14 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppFarmacia
+namespace Presentacion.Formularios
 {
-	public partial class Form1 : Form
+	public partial class FrmPrincipal : Form
 	{
-		public Form1()
+		public FrmPrincipal()
 		{
 			InitializeComponent();
 		}
 
+	
 	}
 }
