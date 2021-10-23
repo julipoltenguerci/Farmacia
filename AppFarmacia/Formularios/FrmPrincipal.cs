@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppFarmacia
+namespace Presentacion.Formularios
 {
 	public partial class FrmPrincipal : Form
 	{
@@ -17,5 +17,6 @@ namespace AppFarmacia
 			InitializeComponent();
 		}
 
+	
 	}
 }
