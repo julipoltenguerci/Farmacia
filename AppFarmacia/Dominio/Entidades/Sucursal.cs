@@ -13,13 +13,14 @@ namespace Dominio.Entidades
         public string CalleSuc { get; set; }
         public int AlturaSuc { get; set; }
 
-        //  public Barrio Barrio{ get; set; }
-        public Sucursal(int idSucursal, string nombreSuc, string calle, int num)
+        public Barrio Barrio{ get; set; }
+        public Sucursal(int idSucursal, string nombreSuc, string calle, int num,Barrio barrio)
         {
             IdSucursal = idSucursal;
             NombreSuc = nombreSuc;
             CalleSuc = calle;
             AlturaSuc = num;
+            Barrio = barrio;
         }
     }
 }

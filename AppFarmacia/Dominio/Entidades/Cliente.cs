@@ -12,9 +12,9 @@ namespace Dominio.Entidades
         public string  TelCli { get; set; }
         public string CalleCli { get; set; }
         public int AlturaCli { get; set; }
-        //public Barrios Barrio { get; set; }
+        public Barrio Barrio { get; set; }
 
-        public Cliente(int idCliente, string nombre, string ape, string tel, string calle, int alt): base(nombre, ape) 
+        public Cliente(int idCliente, string nombre, string ape, string tel, string calle, int alt,Barrio barrio): base(nombre, ape) 
         {
 
             IdCliente = idCliente;
@@ -23,6 +23,7 @@ namespace Dominio.Entidades
             TelCli = tel;
             CalleCli = calle;
             AlturaCli = alt;
+            Barrio = barrio;
 
         }
 

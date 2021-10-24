@@ -15,9 +15,10 @@ namespace Dominio.Entidades
 
         public string CalleProv { get; set; }
         public int AlturaProv { get; set; }
-        //Public Barrios Barrio {get;set;}
 
-        public Proveedores(int idProveedor, string nombreProveedor, string razonSocial, string cuit, string calle, int altura)
+        public Barrio BarrioProv { get; set; }
+
+        public Proveedores(int idProveedor, string nombreProveedor, string razonSocial, string cuit, string calle, int altura,Barrio barrio)
         {
             IdProveedor = idProveedor;
             NombreProveedor = nombreProveedor;
@@ -25,6 +26,7 @@ namespace Dominio.Entidades
             Cuit = cuit;
             CalleProv = calle;
             AlturaProv = altura;
+            BarrioProv = barrio;
         }
     }
 }
