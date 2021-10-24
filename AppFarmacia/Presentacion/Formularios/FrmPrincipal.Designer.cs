@@ -52,6 +52,10 @@ namespace Presentacion
 			this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tiposSuministrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tiposSuministrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.editarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+			this.borrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -109,6 +113,11 @@ namespace Presentacion
 			// 
 			// editarToolStripMenuItem
 			// 
+			this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarToolStripMenuItem,
+            this.nuevoToolStripMenuItem1,
+            this.editarToolStripMenuItem3,
+            this.borrarToolStripMenuItem1});
 			this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
 			this.editarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
 			this.editarToolStripMenuItem.Text = "Facturas";
@@ -220,6 +229,30 @@ namespace Presentacion
 			this.tiposSuministrosToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
 			this.tiposSuministrosToolStripMenuItem1.Text = "Tipos Suministros";
 			// 
+			// consultarToolStripMenuItem
+			// 
+			this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+			this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.consultarToolStripMenuItem.Text = "Consultar";
+			// 
+			// nuevoToolStripMenuItem1
+			// 
+			this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
+			this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.nuevoToolStripMenuItem1.Text = "Nuevo";
+			// 
+			// editarToolStripMenuItem3
+			// 
+			this.editarToolStripMenuItem3.Name = "editarToolStripMenuItem3";
+			this.editarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+			this.editarToolStripMenuItem3.Text = "Editar";
+			// 
+			// borrarToolStripMenuItem1
+			// 
+			this.borrarToolStripMenuItem1.Name = "borrarToolStripMenuItem1";
+			this.borrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.borrarToolStripMenuItem1.Text = "Borrar";
+			// 
 			// FrmPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -263,6 +296,10 @@ namespace Presentacion
 		private System.Windows.Forms.ToolStripMenuItem provinciasToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem tiposSuministrosToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem tiposSuministrosToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem3;
+		private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem1;
 	}
 }
 
