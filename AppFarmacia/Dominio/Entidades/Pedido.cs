@@ -18,6 +18,23 @@ namespace Dominio.Entidades
         public List<DetallePedido> Dpedido { get; set; }
 
 
+        public Pedido()
+        {
+            Dpedido = new List<DetallePedido>();
+        }
+
+        public void AgregarDetalle(DetallePedido detalle)
+        {
+            Dpedido.Add(detalle);
+        }
+
+        public void QuitarDetalle(int indice)
+        {
+            Dpedido.RemoveAt(indice);
+        }
+
+
+
 
     }
 }

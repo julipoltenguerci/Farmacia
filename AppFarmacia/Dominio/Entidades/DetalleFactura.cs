@@ -10,16 +10,17 @@ namespace Dominio.Entidades
 	{
         public Suministro Suministro { get; set; }
         public int CantidadSum { get; set; }
-        public double PrecioUnitario { get; set; }
-        public double Descuento { get; set; } // este debería ser un campo del detalle directamente en la base
+        public double PrecioUnitarioFact { get; set; }
+        public Descuento Descuento { get; set; }
 
+        //Public TipoVenta Tipoventa{get; set;}
+        //Autorizacion Autorizacion {get; set;}
 
-
-        public DetalleFactura(Suministro suministro, int cantidad, double preunit, double desc)
+        public DetalleFactura(Suministro suministro, int cantidad, double preunit, Descuento desc)
         {
             Suministro = suministro;
             CantidadSum = cantidad;
-            PrecioUnitario = preunit;
+            PrecioUnitarioFact = preunit;
             Descuento = desc;
         }
 
