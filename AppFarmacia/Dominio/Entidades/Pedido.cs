@@ -8,5 +8,16 @@ namespace Dominio.Entidades
 {
 	class Pedido
 	{
-	}
+        public int IdPedido { get; set; }
+        public DateTime Fpedido { get; set; }
+        public DateTime Fentrega { get; set; }
+        public Empleado EmpleadoPedido { get; set; }
+        public Sucursal SucursalPedido { get; set; }
+        public EmpleadoProveedor EproveedorPedido { get; set; }
+        public Proveedores ProveedorPedido { get; set; }
+        public List<DetallePedido> Dpedido { get; set; }
+
+
+
+    }
 }
