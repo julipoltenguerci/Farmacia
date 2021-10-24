@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccesoDatos.Interfaces
+namespace Dominio.Entidades
 {
-	public interface IFacturaDao
+	class Pedido
 	{
 	}
 }

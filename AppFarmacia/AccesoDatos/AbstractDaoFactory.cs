@@ -5,9 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccesoDatos.Implementaciones
+namespace AccesoDatos
 {
-	class FacturaDao:IDao
+	abstract class AbstractDaoFactory
 	{
+		public abstract IDao CrearFacturaDao();
+		public abstract IDao CrearPedidoDao();
+
 	}
 }

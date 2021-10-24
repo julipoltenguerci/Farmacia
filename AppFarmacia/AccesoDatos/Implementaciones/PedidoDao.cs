@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Implementaciones
 {
-	class FacturaDao:IDao
+	class PedidoDao:IDao
 	{
 	}
 }
