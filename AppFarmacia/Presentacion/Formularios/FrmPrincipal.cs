@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,9 @@ namespace Presentacion
 			InitializeComponent();
 		}
 
+		private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new FrmConsultar().ShowDialog();
+		}
 	}
 }
