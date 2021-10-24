@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-	class Proveedores
-	{
+    class Proveedores
+    {
         public int IdProveedor { get; set; }
         public string NombreProveedor { get; set; }
         public string RazonSocial { get; set; }
-        public int Cuit { get; set; }
+        public string Cuit { get; set; }
 
         public string CalleProv { get; set; }
         public int AlturaProv { get; set; }
-        //Barrio Barrio?
+        //Public Barrios Barrio {get;set;}
 
-        public Proveedores(int idProveedor, string nombreProveedor, string razonSocial, int cuit, string calleProv, int alturaProv)
+        public Proveedores(int idProveedor, string nombreProveedor, string razonSocial, string cuit, string calle, int altura)
         {
             IdProveedor = idProveedor;
             NombreProveedor = nombreProveedor;
             RazonSocial = razonSocial;
             Cuit = cuit;
-            CalleProv = calleProv;
-            AlturaProv = alturaProv;
+            CalleProv = calle;
+            AlturaProv = altura;
         }
     }
 }

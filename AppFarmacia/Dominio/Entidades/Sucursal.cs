@@ -10,16 +10,16 @@ namespace Dominio.Entidades
 	{
         public int IdSucursal { get; set; }
         public string NombreSuc { get; set; }
-        public string DireCalle { get; set; }
-        public int DireAltura { get; set; }
+        public string CalleSuc { get; set; }
+        public int AlturaSuc { get; set; }
 
         //  public Barrio Barrio{ get; set; }
-        public Sucursal(int idSucursal, string nombreSuc, string direCalle, int direAltura)
+        public Sucursal(int idSucursal, string nombreSuc, string calle, int num)
         {
             IdSucursal = idSucursal;
             NombreSuc = nombreSuc;
-            DireCalle = direCalle;
-            DireAltura = direAltura;
+            CalleSuc = calle;
+            AlturaSuc = num;
         }
     }
 }
