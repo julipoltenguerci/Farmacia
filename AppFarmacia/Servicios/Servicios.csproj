@@ -7,7 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj" />
     <ProjectReference Include="..\Dominio\Dominio.csproj" />
-    <ProjectReference Include="..\Presentacion\Presentacion.csproj" />
   </ItemGroup>
 
 </Project>
