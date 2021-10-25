@@ -8,7 +8,6 @@ namespace Dominio.Entidades
 {
     class DetallePedido
     {
-        //quedo ok ger
         public int IdDetalleP { get; set; }        
         public Suministro SuministroPedido { get; set; }
         public Medico MedicoPedido { get; set; }
