@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-	class Suministro
+	public class Suministro
 	{
         public int IdSuministro { get; set; }
         public int CodigodeBarras { get; set; }

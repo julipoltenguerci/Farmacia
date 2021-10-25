@@ -44,14 +44,14 @@ namespace Presentacion.Formularios
 			this.btnBorrar = new System.Windows.Forms.Button();
 			this.chkBajas = new System.Windows.Forms.CheckBox();
 			this.dgvConsulta = new System.Windows.Forms.DataGridView();
-			this.btnEliminarFiltro = new System.Windows.Forms.Button();
-			this.btnCancelar = new System.Windows.Forms.Button();
 			this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cFechaFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cFechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cAccion = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.btnEliminarFiltro = new System.Windows.Forms.Button();
+			this.btnCancelar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -71,6 +71,7 @@ namespace Presentacion.Formularios
 			this.cboFiltroFecha.Name = "cboFiltroFecha";
 			this.cboFiltroFecha.Size = new System.Drawing.Size(223, 23);
 			this.cboFiltroFecha.TabIndex = 1;
+			this.cboFiltroFecha.SelectedIndexChanged += new System.EventHandler(this.cboFiltroFecha_SelectedIndexChanged);
 			// 
 			// lblFechaDesde
 			// 
@@ -138,6 +139,7 @@ namespace Presentacion.Formularios
 			this.btnConsultar.TabIndex = 9;
 			this.btnConsultar.Text = "Consultar";
 			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
 			// 
 			// btnNuevo
 			// 
@@ -197,24 +199,6 @@ namespace Presentacion.Formularios
 			this.dgvConsulta.Size = new System.Drawing.Size(640, 388);
 			this.dgvConsulta.TabIndex = 14;
 			// 
-			// btnEliminarFiltro
-			// 
-			this.btnEliminarFiltro.Location = new System.Drawing.Point(12, 577);
-			this.btnEliminarFiltro.Name = "btnEliminarFiltro";
-			this.btnEliminarFiltro.Size = new System.Drawing.Size(94, 23);
-			this.btnEliminarFiltro.TabIndex = 15;
-			this.btnEliminarFiltro.Text = "Eliminar Filtro";
-			this.btnEliminarFiltro.UseVisualStyleBackColor = true;
-			// 
-			// btnCancelar
-			// 
-			this.btnCancelar.Location = new System.Drawing.Point(577, 577);
-			this.btnCancelar.Name = "btnCancelar";
-			this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-			this.btnCancelar.TabIndex = 16;
-			this.btnCancelar.Text = "Cancelar";
-			this.btnCancelar.UseVisualStyleBackColor = true;
-			// 
 			// cId
 			// 
 			this.cId.HeaderText = "Factura";
@@ -251,6 +235,25 @@ namespace Presentacion.Formularios
 			this.cAccion.Name = "cAccion";
 			this.cAccion.ReadOnly = true;
 			// 
+			// btnEliminarFiltro
+			// 
+			this.btnEliminarFiltro.Location = new System.Drawing.Point(12, 577);
+			this.btnEliminarFiltro.Name = "btnEliminarFiltro";
+			this.btnEliminarFiltro.Size = new System.Drawing.Size(94, 23);
+			this.btnEliminarFiltro.TabIndex = 15;
+			this.btnEliminarFiltro.Text = "Eliminar Filtro";
+			this.btnEliminarFiltro.UseVisualStyleBackColor = true;
+			this.btnEliminarFiltro.Click += new System.EventHandler(this.btnEliminarFiltro_Click);
+			// 
+			// btnCancelar
+			// 
+			this.btnCancelar.Location = new System.Drawing.Point(577, 577);
+			this.btnCancelar.Name = "btnCancelar";
+			this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+			this.btnCancelar.TabIndex = 16;
+			this.btnCancelar.Text = "Cancelar";
+			this.btnCancelar.UseVisualStyleBackColor = true;
+			// 
 			// FrmConsultar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -276,6 +279,7 @@ namespace Presentacion.Formularios
 			this.Name = "FrmConsultar";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Consulta";
+			this.Load += new System.EventHandler(this.FrmConsultar_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-	class DetalleFactura
+	public class DetalleFactura
 	{
         public Suministro Suministro { get; set; }
         public int CantidadSum { get; set; }

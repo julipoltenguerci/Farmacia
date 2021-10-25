@@ -1,4 +1,5 @@
-﻿using Servicios.Implementaciones;
+﻿using AccesoDatos;
+using Servicios.Implementaciones;
 using Servicios.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Servicios
 {
-	class ServiceFactoryImp:AbstractServiceFactory
+	public class ServiceFactoryImp : AbstractServiceFactory
 	{
-		public override IService CrearService()
+		public override IService CrearService(AbstractDaoFactory factory)
 		{
-			return new FacturaService();
+			return new FacturaService(factory);
 		}
 	}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-	class Persona
+	public class Persona
 	{
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -17,5 +17,9 @@ namespace Dominio.Entidades
             Nombre = nombre;
             Apellido = apellido;
         }
+		public Persona()
+		{
+
+		}
     }
 }

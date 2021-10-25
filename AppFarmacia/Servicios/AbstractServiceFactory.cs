@@ -1,4 +1,5 @@
-﻿using Servicios.Interfaces;
+﻿using AccesoDatos;
+using Servicios.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Servicios
 {
-	abstract class AbstractServiceFactory
+	public abstract class AbstractServiceFactory
 	{
-		public abstract IService CrearService();
+		public abstract IService CrearService(AbstractDaoFactory factory);
 	}
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
-	class DaoFactoryImp : AbstractDaoFactory
+	public class DaoFactoryImp : AbstractDaoFactory
 	{
 		public override IDao CrearFacturaDao()
 		{
