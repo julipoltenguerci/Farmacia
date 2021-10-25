@@ -2,6 +2,7 @@
 using Dominio;
 using Dominio.Entidades;
 using Servicios;
+using Servicios.Implementaciones;
 using Servicios.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,12 @@ namespace Presentacion.Formularios
 	public partial class FrmConsultar : Form
 	{
 		private IService gestor;
+		private List<Factura> lst;
 		public FrmConsultar()
 		{
 			InitializeComponent();
 			gestor = new ServiceFactoryImp().CrearService(new DaoFactoryImp());
+			lst = new List<Factura>();
 		}
 
 		private void FrmConsultar_Load(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace Presentacion.Formularios
 
 		private void CargarGrillaConFacturas()
 		{
+			List<Factura> lst2 = new List<Factura>();
 			List<Parametro> filtros = new List<Parametro>();
 			filtros.Add(new Parametro("@fechaDesde", dtpFechaDesde.Value));
 			filtros.Add(new Parametro("@fechaHasta", dtpFechaHasta.Value));
@@ -56,10 +60,16 @@ namespace Presentacion.Formularios
 
 			filtros.Add(new Parametro("@tipo", cboFiltro.SelectedIndex));
 
-			List<Factura> lst = new List<Factura>();
+			dgvConsulta.Rows.Clear();
+			lst =gestor.GetFacturasByFilters(filtros);
+			lst2 = gestor.GetFacturasByFilters(filtros);
 
-			lst=gestor.GetFacturasByFilters(filtros);
-			CargarGrilla(lst);
+
+			foreach (Factura item in lst)
+			{
+				dgvConsulta.Rows.Add(new object[] { item.IdFactura, item.Fecha.ToString("dd/MM/yyyy"), item.Cliente.ToString(), item.Total, ""/*item.GetFechaBajaFormato()*/ });
+			}
+			
 		}
 		private void CargarGrilla(List<Factura> lst)
 		{
