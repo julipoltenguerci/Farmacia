@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
-	abstract class AbstractDaoFactory
+	public abstract class AbstractDaoFactory
 	{
 		public abstract IDao CrearFacturaDao();
 		public abstract IDao CrearPedidoDao();

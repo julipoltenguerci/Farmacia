@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-	class Cliente:Persona
+	public class Cliente:Persona
 	{
         public int IdCliente { get; set; }
         public string  TelCli { get; set; }
@@ -26,7 +26,15 @@ namespace Dominio.Entidades
             Barrio = barrio;
 
         }
+		public Cliente():base()
+		{
 
-       
-    }
+		}
+		public override string ToString()
+		{
+			return Apellido+", "+Nombre;
+		}
+
+
+	}
 }
