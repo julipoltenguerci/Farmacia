@@ -203,3 +203,51 @@ create table Detalles_Facturas
 	constraint fk_id_df_autorizacion foreign key (id_autorizacion) references Autorizaciones(id_autorizacion)
 )
 go
+alter PROCEDURE PA_CONSULTA_FACTURAS_FILTRO
+@nroFactura int=null,
+@fechaDesde date=null,
+@fechaHasta date=null,
+@cliente varchar(150)=null,
+@tipo int=null,
+@activo varchar(1)
+AS
+	if @tipo=0 --filtro por numero factura
+		SELECT f.id_factura,convert(varchar,
+			f.fecha_factura,3) fecha,
+			c.ape_cliente apellido,
+			c.nom_cliente nombre,
+			SUM(df.cant_suministro*df.precio_unitario) total,
+			'fecha_baja' fechaB
+		FROM Facturas f JOIN Clientes c ON f.id_cliente=c.id_cliente
+			JOIN Detalles_Facturas df ON df.id_factura=f.id_factura
+		WHERE 
+		 ((@fechaDesde is null and @fechaHasta is  null) OR (f.fecha_factura between @fechaDesde and @fechaHasta))
+		 AND(@nroFactura is null OR f.id_factura=@nroFactura)
+		 AND (@activo is null OR (@activo = 'S') OR (@activo = 'N'))--(@activo = 'N' and 'fecha_baja' IS  NULL))
+		 GROUP BY f.id_factura,convert(varchar,f.fecha_factura,3),c.ape_cliente,c.nom_cliente
+	if @tipo=1 --filtro por cliente
+		SELECT f.id_factura,convert(varchar,
+			f.fecha_factura,3) fecha,
+			c.ape_cliente apellido,
+			c.nom_cliente nombre,
+			SUM(df.cant_suministro*df.precio_unitario) total,
+			'fecha_baja' fechaB
+		FROM Facturas f JOIN Clientes c ON f.id_cliente=c.id_cliente
+			JOIN Detalles_Facturas df ON df.id_factura=f.id_factura
+		WHERE 
+		 ((@fechaDesde is null and @fechaHasta is  null) OR (f.fecha_factura between @fechaDesde and @fechaHasta))
+		 AND(@cliente is null OR (c.ape_cliente like '%' + @cliente + '%') OR(c.nom_cliente like '%' + @cliente + '%'))
+		 AND (@activo is null OR (@activo = 'S') OR (@activo = 'N'))--(@activo = 'N' and 'fecha_baja' IS  NULL))
+		GROUP BY f.id_factura,convert(varchar,f.fecha_factura,3),c.ape_cliente,c.nom_cliente
+	if @tipo=2 --filtro por bajas
+		SELECT f.id_factura,convert(varchar,
+			f.fecha_factura,3) fecha,
+			c.ape_cliente apellido,
+			c.nom_cliente nombre,
+			SUM(df.cant_suministro*df.precio_unitario) total,
+			'fecha_baja' fechaB
+		FROM Facturas f JOIN Clientes c ON f.id_cliente=c.id_cliente
+			JOIN Detalles_Facturas df ON df.id_factura=f.id_factura
+		WHERE 'fecha_baja' is not null
+		GROUP BY f.id_factura,convert(varchar,f.fecha_factura,3),c.ape_cliente,c.nom_cliente
+go

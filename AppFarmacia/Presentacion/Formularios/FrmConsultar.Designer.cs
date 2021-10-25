@@ -44,14 +44,14 @@ namespace Presentacion.Formularios
 			this.btnBorrar = new System.Windows.Forms.Button();
 			this.chkBajas = new System.Windows.Forms.CheckBox();
 			this.dgvConsulta = new System.Windows.Forms.DataGridView();
+			this.btnEliminarFiltro = new System.Windows.Forms.Button();
+			this.btnCancelar = new System.Windows.Forms.Button();
 			this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cFechaFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cFechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cAccion = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.btnEliminarFiltro = new System.Windows.Forms.Button();
-			this.btnCancelar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -66,6 +66,7 @@ namespace Presentacion.Formularios
 			// 
 			// cboFiltroFecha
 			// 
+			this.cboFiltroFecha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboFiltroFecha.FormattingEnabled = true;
 			this.cboFiltroFecha.Location = new System.Drawing.Point(56, 22);
 			this.cboFiltroFecha.Name = "cboFiltroFecha";
@@ -109,6 +110,7 @@ namespace Presentacion.Formularios
 			// 
 			// cboFiltro
 			// 
+			this.cboFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboFiltro.FormattingEnabled = true;
 			this.cboFiltro.Location = new System.Drawing.Point(56, 82);
 			this.cboFiltro.Name = "cboFiltro";
@@ -199,42 +201,6 @@ namespace Presentacion.Formularios
 			this.dgvConsulta.Size = new System.Drawing.Size(640, 388);
 			this.dgvConsulta.TabIndex = 14;
 			// 
-			// cId
-			// 
-			this.cId.HeaderText = "Factura";
-			this.cId.Name = "cId";
-			this.cId.ReadOnly = true;
-			// 
-			// cFechaFactura
-			// 
-			this.cFechaFactura.HeaderText = "Fecha";
-			this.cFechaFactura.Name = "cFechaFactura";
-			this.cFechaFactura.ReadOnly = true;
-			// 
-			// cIdCliente
-			// 
-			this.cIdCliente.HeaderText = "Cliente";
-			this.cIdCliente.Name = "cIdCliente";
-			this.cIdCliente.ReadOnly = true;
-			// 
-			// cTotal
-			// 
-			this.cTotal.HeaderText = "Total";
-			this.cTotal.Name = "cTotal";
-			this.cTotal.ReadOnly = true;
-			// 
-			// cFechaBaja
-			// 
-			this.cFechaBaja.HeaderText = "Fecha Baja";
-			this.cFechaBaja.Name = "cFechaBaja";
-			this.cFechaBaja.ReadOnly = true;
-			// 
-			// cAccion
-			// 
-			this.cAccion.HeaderText = "Accion";
-			this.cAccion.Name = "cAccion";
-			this.cAccion.ReadOnly = true;
-			// 
 			// btnEliminarFiltro
 			// 
 			this.btnEliminarFiltro.Location = new System.Drawing.Point(12, 577);
@@ -253,6 +219,45 @@ namespace Presentacion.Formularios
 			this.btnCancelar.TabIndex = 16;
 			this.btnCancelar.Text = "Cancelar";
 			this.btnCancelar.UseVisualStyleBackColor = true;
+			// 
+			// cId
+			// 
+			this.cId.HeaderText = "Factura";
+			this.cId.Name = "cId";
+			this.cId.ReadOnly = true;
+			// 
+			// cFechaFactura
+			// 
+			this.cFechaFactura.HeaderText = "Fecha";
+			this.cFechaFactura.Name = "cFechaFactura";
+			this.cFechaFactura.ReadOnly = true;
+			// 
+			// cIdCliente
+			// 
+			this.cIdCliente.HeaderText = "Cliente";
+			this.cIdCliente.Name = "cIdCliente";
+			this.cIdCliente.ReadOnly = true;
+			this.cIdCliente.Width = 137;
+			// 
+			// cTotal
+			// 
+			this.cTotal.HeaderText = "Total";
+			this.cTotal.Name = "cTotal";
+			this.cTotal.ReadOnly = true;
+			// 
+			// cFechaBaja
+			// 
+			this.cFechaBaja.HeaderText = "Fecha Baja";
+			this.cFechaBaja.Name = "cFechaBaja";
+			this.cFechaBaja.ReadOnly = true;
+			// 
+			// cAccion
+			// 
+			this.cAccion.HeaderText = "Accion";
+			this.cAccion.Name = "cAccion";
+			this.cAccion.ReadOnly = true;
+			this.cAccion.Text = "Ver";
+			this.cAccion.UseColumnTextForButtonValue = true;
 			// 
 			// FrmConsultar
 			// 
