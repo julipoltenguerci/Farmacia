@@ -139,7 +139,7 @@ go
 create table Tipos_condiciones_venta 
 (
 	id_tipo_cond_vta int identity(1,1),
-	tipo_cond_venta bit,
+	tipo_cond_venta varchar(20),
 	constraint pk_id_tipo_cond_vta primary key (id_tipo_cond_vta)
 )
 go
