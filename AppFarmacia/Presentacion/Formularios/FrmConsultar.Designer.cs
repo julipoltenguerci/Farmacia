@@ -46,6 +46,12 @@ namespace Presentacion.Formularios
 			this.dgvConsulta = new System.Windows.Forms.DataGridView();
 			this.btnEliminarFiltro = new System.Windows.Forms.Button();
 			this.btnCancelar = new System.Windows.Forms.Button();
+			this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cFechaFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cFechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cAccion = new System.Windows.Forms.DataGridViewButtonColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -174,10 +180,19 @@ namespace Presentacion.Formularios
 			// 
 			this.dgvConsulta.AllowUserToAddRows = false;
 			this.dgvConsulta.AllowUserToDeleteRows = false;
-			this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvConsulta.ColumnHeadersHeight = 30;
+			this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+			this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cId,
+            this.cFechaFactura,
+            this.cIdCliente,
+            this.cTotal,
+            this.cFechaBaja,
+            this.cAccion});
 			this.dgvConsulta.Location = new System.Drawing.Point(12, 183);
 			this.dgvConsulta.Name = "dgvConsulta";
 			this.dgvConsulta.ReadOnly = true;
+			this.dgvConsulta.RowHeadersVisible = false;
 			this.dgvConsulta.RowTemplate.Height = 25;
 			this.dgvConsulta.Size = new System.Drawing.Size(640, 388);
 			this.dgvConsulta.TabIndex = 14;
@@ -199,6 +214,42 @@ namespace Presentacion.Formularios
 			this.btnCancelar.TabIndex = 16;
 			this.btnCancelar.Text = "Cancelar";
 			this.btnCancelar.UseVisualStyleBackColor = true;
+			// 
+			// cId
+			// 
+			this.cId.HeaderText = "Factura";
+			this.cId.Name = "cId";
+			this.cId.ReadOnly = true;
+			// 
+			// cFechaFactura
+			// 
+			this.cFechaFactura.HeaderText = "Fecha";
+			this.cFechaFactura.Name = "cFechaFactura";
+			this.cFechaFactura.ReadOnly = true;
+			// 
+			// cIdCliente
+			// 
+			this.cIdCliente.HeaderText = "Cliente";
+			this.cIdCliente.Name = "cIdCliente";
+			this.cIdCliente.ReadOnly = true;
+			// 
+			// cTotal
+			// 
+			this.cTotal.HeaderText = "Total";
+			this.cTotal.Name = "cTotal";
+			this.cTotal.ReadOnly = true;
+			// 
+			// cFechaBaja
+			// 
+			this.cFechaBaja.HeaderText = "Fecha Baja";
+			this.cFechaBaja.Name = "cFechaBaja";
+			this.cFechaBaja.ReadOnly = true;
+			// 
+			// cAccion
+			// 
+			this.cAccion.HeaderText = "Accion";
+			this.cAccion.Name = "cAccion";
+			this.cAccion.ReadOnly = true;
 			// 
 			// FrmConsultar
 			// 
@@ -223,6 +274,7 @@ namespace Presentacion.Formularios
 			this.Controls.Add(this.cboFiltroFecha);
 			this.Controls.Add(this.lblFiltroFecha);
 			this.Name = "FrmConsultar";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Consulta";
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
 			this.ResumeLayout(false);
@@ -249,5 +301,11 @@ namespace Presentacion.Formularios
 		private System.Windows.Forms.DataGridView dgvConsulta;
 		private System.Windows.Forms.Button btnEliminarFiltro;
 		private System.Windows.Forms.Button btnCancelar;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cId;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cFechaFactura;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cIdCliente;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cTotal;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cFechaBaja;
+		private System.Windows.Forms.DataGridViewButtonColumn cAccion;
 	}
 }
