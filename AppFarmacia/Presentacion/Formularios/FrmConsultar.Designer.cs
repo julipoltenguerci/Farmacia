@@ -223,7 +223,7 @@ namespace Presentacion.Formularios
 			this.Controls.Add(this.cboFiltroFecha);
 			this.Controls.Add(this.lblFiltroFecha);
 			this.Name = "FrmConsultar";
-			this.Text = "FrmConsultar";
+			this.Text = "Consulta";
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

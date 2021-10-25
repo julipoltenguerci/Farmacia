@@ -29,13 +29,17 @@ namespace Presentacion
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.menuFarmacia = new System.Windows.Forms.MenuStrip();
 			this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.editarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+			this.borrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,16 +56,12 @@ namespace Presentacion
 			this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tiposSuministrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tiposSuministrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.editarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-			this.borrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.menuStrip1.SuspendLayout();
+			this.menuFarmacia.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// menuStrip1
+			// menuFarmacia
 			// 
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.menuFarmacia.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.editarToolStripMenuItem,
             this.editarToolStripMenuItem1,
@@ -70,11 +70,11 @@ namespace Presentacion
             this.clientesToolStripMenuItem,
             this.empleadosToolStripMenuItem,
             this.sucursalesToolStripMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-			this.menuStrip1.TabIndex = 0;
-			this.menuStrip1.Text = "menuStrip1";
+			this.menuFarmacia.Location = new System.Drawing.Point(0, 0);
+			this.menuFarmacia.Name = "menuFarmacia";
+			this.menuFarmacia.Size = new System.Drawing.Size(800, 24);
+			this.menuFarmacia.TabIndex = 0;
+			this.menuFarmacia.Text = "menuStrip1";
 			// 
 			// archivoToolStripMenuItem
 			// 
@@ -121,6 +121,31 @@ namespace Presentacion
 			this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
 			this.editarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
 			this.editarToolStripMenuItem.Text = "Facturas";
+			// 
+			// consultarToolStripMenuItem
+			// 
+			this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+			this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.consultarToolStripMenuItem.Text = "Consultar";
+			this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+			// 
+			// nuevoToolStripMenuItem1
+			// 
+			this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
+			this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+			this.nuevoToolStripMenuItem1.Text = "Nuevo";
+			// 
+			// editarToolStripMenuItem3
+			// 
+			this.editarToolStripMenuItem3.Name = "editarToolStripMenuItem3";
+			this.editarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
+			this.editarToolStripMenuItem3.Text = "Editar";
+			// 
+			// borrarToolStripMenuItem1
+			// 
+			this.borrarToolStripMenuItem1.Name = "borrarToolStripMenuItem1";
+			this.borrarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+			this.borrarToolStripMenuItem1.Text = "Borrar";
 			// 
 			// editarToolStripMenuItem1
 			// 
@@ -229,43 +254,19 @@ namespace Presentacion
 			this.tiposSuministrosToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
 			this.tiposSuministrosToolStripMenuItem1.Text = "Tipos Suministros";
 			// 
-			// consultarToolStripMenuItem
-			// 
-			this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-			this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.consultarToolStripMenuItem.Text = "Consultar";
-			// 
-			// nuevoToolStripMenuItem1
-			// 
-			this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-			this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-			this.nuevoToolStripMenuItem1.Text = "Nuevo";
-			// 
-			// editarToolStripMenuItem3
-			// 
-			this.editarToolStripMenuItem3.Name = "editarToolStripMenuItem3";
-			this.editarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-			this.editarToolStripMenuItem3.Text = "Editar";
-			// 
-			// borrarToolStripMenuItem1
-			// 
-			this.borrarToolStripMenuItem1.Name = "borrarToolStripMenuItem1";
-			this.borrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-			this.borrarToolStripMenuItem1.Text = "Borrar";
-			// 
 			// FrmPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.menuStrip1);
-			this.MainMenuStrip = this.menuStrip1;
+			this.Controls.Add(this.menuFarmacia);
+			this.MainMenuStrip = this.menuFarmacia;
 			this.Name = "FrmPrincipal";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Farmacia";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
+			this.menuFarmacia.ResumeLayout(false);
+			this.menuFarmacia.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -273,7 +274,7 @@ namespace Presentacion
 
 		#endregion
 
-		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.MenuStrip menuFarmacia;
 		private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem2;
