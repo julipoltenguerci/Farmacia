@@ -1,5 +1,5 @@
 -- Datos Insertados - BD Farmacéutica
-
+set dateformat dmy
 --Provincias
 
 Insert into Provincias (nom_provincia) values ('Córdoba')
@@ -210,6 +210,7 @@ Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_ba
 --Select *
 --From Proveedores
 
+set dateformat dmy
 
 --Pedidos
 
