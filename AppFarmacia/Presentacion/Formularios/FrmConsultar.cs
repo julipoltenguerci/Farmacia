@@ -36,7 +36,6 @@ namespace Presentacion.Formularios
 
 		private void CargarGrillaConFacturas()
 		{
-			List<Factura> lst2 = new List<Factura>();
 			List<Parametro> filtros = new List<Parametro>();
 			filtros.Add(new Parametro("@fechaDesde", dtpFechaDesde.Value));
 			filtros.Add(new Parametro("@fechaHasta", dtpFechaHasta.Value));
@@ -62,7 +61,6 @@ namespace Presentacion.Formularios
 
 			dgvConsulta.Rows.Clear();
 			lst =gestor.GetFacturasByFilters(filtros);
-			lst2 = gestor.GetFacturasByFilters(filtros);
 
 
 			foreach (Factura item in lst)

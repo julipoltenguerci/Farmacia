@@ -132,19 +132,20 @@ namespace Presentacion
 			// nuevoToolStripMenuItem1
 			// 
 			this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-			this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+			this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
 			this.nuevoToolStripMenuItem1.Text = "Nuevo";
+			this.nuevoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoToolStripMenuItem1_Click);
 			// 
 			// editarToolStripMenuItem3
 			// 
 			this.editarToolStripMenuItem3.Name = "editarToolStripMenuItem3";
-			this.editarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
+			this.editarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
 			this.editarToolStripMenuItem3.Text = "Editar";
 			// 
 			// borrarToolStripMenuItem1
 			// 
 			this.borrarToolStripMenuItem1.Name = "borrarToolStripMenuItem1";
-			this.borrarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+			this.borrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
 			this.borrarToolStripMenuItem1.Text = "Borrar";
 			// 
 			// editarToolStripMenuItem1

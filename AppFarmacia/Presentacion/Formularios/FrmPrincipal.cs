@@ -22,5 +22,10 @@ namespace Presentacion
 		{
 			new FrmConsultar().ShowDialog();
 		}
+
+		private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			new FrmNuevo().ShowDialog();
+		}
 	}
 }
