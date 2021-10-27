@@ -36,8 +36,11 @@ namespace AccesoDatos.Implementaciones
 					oPedido.ProveedorPedido = oProveedor;
 
                     if (!row["fechaB"].Equals(DBNull.Value))
+					{
 
-                        lst.Add(oPedido);
+					}
+
+                    lst.Add(oPedido);
                 }
             }
 			catch (SqlException)

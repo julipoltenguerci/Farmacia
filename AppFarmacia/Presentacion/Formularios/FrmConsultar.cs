@@ -115,11 +115,10 @@ namespace Presentacion.Formularios
 			filtros.Add(new Parametro("@tipo", cboFiltro.SelectedIndex));
 
 			dgvConsulta.Rows.Clear();
-			lst =gestor.GetFacturasByFilters(filtros);
-			lst2 = gestor.GetFacturasByFilters(filtros);
+			oLst =gestor.GetByFilters(filtros,Accion.Factura);
 
 
-			foreach (Factura item in lst)
+			foreach (Factura item in oLst)
 			{
 				dgvConsulta.Rows.Add(new object[] { item.IdFactura, item.Fecha.ToString("dd/MM/yyyy"), item.Cliente.ToString(), item.Total, ""/*item.GetFechaBajaFormato()*/ });
 			}

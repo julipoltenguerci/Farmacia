@@ -36,9 +36,12 @@ namespace AccesoDatos.Implementaciones
 
                     oFactura.Cliente = oCliente;
 
-                    if (!row["fechaB"].Equals(DBNull.Value)) //Columna agregada
+                    if (!row["fechaB"].Equals(DBNull.Value))
+					{
 
-                        lst.Add(oFactura);
+					}
+
+                    lst.Add(oFactura);
                 }
             }
             catch (SqlException)
