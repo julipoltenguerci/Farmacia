@@ -1,3 +1,4 @@
+USE db_Farmacia
 -- Datos Insertados - BD Farmacéutica
 set dateformat dmy
 --Provincias

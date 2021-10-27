@@ -19,7 +19,7 @@ namespace AccesoDatos
 		//private DataTable table { get; set; }
 		private HelperDao()
 		{
-			ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
+			ConnectionString = @"Data Source=HOME\SQLEXPRESS;Initial Catalog=Farmacia2;Integrated Security=True";
 			cnn = new SqlConnection(ConnectionString);
 			//table = new DataTable();
 		}

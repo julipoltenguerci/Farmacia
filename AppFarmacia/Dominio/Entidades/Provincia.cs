@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-    class Provincias
+    class Provincia
     {
         public int IdProvincia { get; set; }
         public string NomProvincia { get; set; }
-        public Localidades Localidad { get; set; }
-        public Provincias(int idProv,string nomProv,Localidades localiProv)
+        public List<Localidad> lLocalidad { get; set; }
+        public Provincia(int idProv,string nomProv)
         {
             this.IdProvincia = idProv;
             this.NomProvincia = nomProv;
-            this.Localidad = localiProv;
+            this.lLocalidad = new List<Localidad>();
         }
 
 

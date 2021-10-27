@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Dominio.Enumeracion;
 
 namespace Presentacion
 {
@@ -20,12 +21,17 @@ namespace Presentacion
 
 		private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			new FrmConsultar().ShowDialog();
+			new FrmConsultar(Accion.Factura).ShowDialog();
 		}
 
-		private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
-		{
-			new FrmNuevo().ShowDialog();
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+			new FrmConsultar(Accion.Pedido).ShowDialog();
 		}
-	}
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
