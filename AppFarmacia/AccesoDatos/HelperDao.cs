@@ -15,13 +15,10 @@ namespace AccesoDatos
 		public string ConnectionString { get; set; }
 		public SqlConnection cnn { get; }
 		public SqlCommand cmd { get; set; }
-
-		//private DataTable table { get; set; }
 		private HelperDao()
 		{
-			ConnectionString = @"Data Source=HOME\SQLEXPRESS;Initial Catalog=Farmacia2;Integrated Security=True";
+			ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
 			cnn = new SqlConnection(ConnectionString);
-			//table = new DataTable();
 		}
 		public static HelperDao ObtenerInstancia()
 		{

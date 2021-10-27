@@ -29,9 +29,5 @@ namespace Presentacion
 			new FrmConsultar(Accion.Pedido).ShowDialog();
 		}
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

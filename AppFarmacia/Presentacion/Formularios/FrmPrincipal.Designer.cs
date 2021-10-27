@@ -299,7 +299,6 @@ namespace Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Farmacia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuFarmacia.ResumeLayout(false);
             this.menuFarmacia.PerformLayout();
             this.ResumeLayout(false);
