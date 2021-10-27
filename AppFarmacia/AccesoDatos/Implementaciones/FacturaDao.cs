@@ -16,8 +16,8 @@ namespace AccesoDatos.Implementaciones
         public List<object> GetByFilters(List<Parametro> parametros)
         {
             
-            List<object> lst = new List<object>(); //Recibe una list de object
-            //Acá sacamos el datatable que teniamos como new por que el Helper ya devuelve un objeto datatable
+            List<object> lst = new List<object>();
+
             try
             {   
                 DataTable  tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CONSULTA_FACTURAS_FILTRO", parametros);
@@ -38,8 +38,9 @@ namespace AccesoDatos.Implementaciones
 
                     if (!row["fechaB"].Equals(DBNull.Value))
 					{
-
-					}
+                        //aca se agrega el campo si existe fecha de baja, dejo a modo ejemplo hasta que agreguemos esto en bd
+                        //oPedido.FechaBaja = Convert.ToDateTime(row["fecha_baja"].ToString());
+                    }
 
                     lst.Add(oFactura);
                 }

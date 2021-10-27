@@ -37,10 +37,11 @@ namespace AccesoDatos.Implementaciones
 
                     if (!row["fechaB"].Equals(DBNull.Value))
 					{
-
+						//aca se agrega el campo si existe fecha de baja, dejo a modo ejemplo hasta que agreguemos esto en bd
+						//oPedido.FechaBaja = Convert.ToDateTime(row["fecha_baja"].ToString());
 					}
 
-                    lst.Add(oPedido);
+					lst.Add(oPedido);
                 }
             }
 			catch (SqlException)
