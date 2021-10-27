@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-    class Proveedor
+    public class Proveedor
     {
         public int IdProveedor { get; set; }
         public string NombreProveedor { get; set; }
@@ -27,6 +27,10 @@ namespace Dominio.Entidades
             CalleProv = calle;
             AlturaProv = altura;
             BarrioProv = barrio;
+        }
+
+        public Proveedor()
+        {
         }
     }
 }

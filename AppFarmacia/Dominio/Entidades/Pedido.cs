@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-	class Pedido
+	 public class Pedido
 	{
         public int IdPedido { get; set; }
         public DateTime Fpedido { get; set; }
@@ -16,7 +16,7 @@ namespace Dominio.Entidades
         public EmpleadoProveedor EproveedorPedido { get; set; }
         public Proveedor ProveedorPedido { get; set; }
         public List<DetallePedido> Dpedido { get; set; }
-
+        public double Total { get; set; }// repito lo de factura
 
         public Pedido()
         {

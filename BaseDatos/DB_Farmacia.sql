@@ -1,7 +1,5 @@
---Creación de la base de datos "Farmacia"
-create database Farmacia
-go
-use Farmacia
+
+use db_Farmacia
 go
 create table Provincias
 (
@@ -203,7 +201,7 @@ create table Detalles_Facturas
 	constraint fk_id_df_autorizacion foreign key (id_autorizacion) references Autorizaciones(id_autorizacion)
 )
 go
-alter PROCEDURE PA_CONSULTA_FACTURAS_FILTRO
+create PROCEDURE PA_CONSULTA_FACTURAS_FILTRO
 @nroFactura int=null,
 @fechaDesde date=null,
 @fechaHasta date=null,
