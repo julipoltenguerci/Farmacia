@@ -12,40 +12,43 @@ using System.Threading.Tasks;
 namespace AccesoDatos.Implementaciones
 {
 	class FacturaDao : IDao
-	{
-		public List<Factura> GetByFilters(List<Parametro> parametros)
-		{
-			List<Factura> lst = new List<Factura>();
-			DataTable tabla = new DataTable();
-			try
-			{
-				tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CONSULTA_FACTURAS_FILTRO", parametros);
+	{   
+        public List<object> GetByFilters(List<Parametro> parametros)
+        {
+            
+            List<object> lst = new List<object>(); //Recibe una list de object
+            //Acá sacamos el datatable que teniamos como new por que el Helper ya devuelve un objeto datatable
+            try
+            {   
+                DataTable  tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CONSULTA_FACTURAS_FILTRO", parametros);
 
-				foreach (DataRow row in tabla.Rows)
-				{
-					Factura oFactura = new Factura();
+                foreach (DataRow row in tabla.Rows)
+                {
+                    Factura oFactura = new Factura();
 
-					oFactura.IdFactura = Convert.ToInt32(row["id_factura"].ToString());
-					oFactura.Fecha = Convert.ToDateTime(row["fecha"].ToString());
-					oFactura.Total = Convert.ToDouble(row["total"].ToString());
+                    oFactura.IdFactura = Convert.ToInt32(row["id_factura"].ToString());
+                    oFactura.Fecha = Convert.ToDateTime(row["fecha"].ToString());
+                    oFactura.Total = Convert.ToDouble(row["total"].ToString());
 
-					Cliente oCliente = new Cliente();
-					oCliente.Apellido = row["apellido"].ToString();
-					oCliente.Nombre = row["nombre"].ToString();
+                    Cliente oCliente = new Cliente();
+                    oCliente.Apellido = row["apellido"].ToString();
+                    oCliente.Nombre = row["nombre"].ToString();
 
-					oFactura.Cliente = oCliente;
+                    oFactura.Cliente = oCliente;
 
-					if (!row["fechaB"].Equals(DBNull.Value))
-						//oFactura.FechaBaja = Convert.ToDateTime(row["fecha_baja"].ToString());
+                    if (!row["fechaB"].Equals(DBNull.Value)) //Columna agregada
 
-					lst.Add(oFactura);
-				}
-			}
-			catch (SqlException)
-			{
-				lst = null;
-			}
-			return lst;
-		}
-	}
+                        lst.Add(oFactura);
+                }
+            }
+            catch (SqlException)
+            {
+                lst = null;
+            }
+            return lst;
+        }
+
+       
+        
+    }
 }

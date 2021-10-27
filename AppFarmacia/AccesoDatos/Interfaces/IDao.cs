@@ -10,6 +10,9 @@ namespace AccesoDatos.Interfaces
 {
 	public interface IDao
 	{
-		List<Factura> GetByFilters(List<Parametro> parametros);
-	}
+        List<object> GetByFilters(List<Parametro> parametro);
+
+        //List<Factura> GetByFilters(List<Parametro> parametros);
+     
+    }
 }
