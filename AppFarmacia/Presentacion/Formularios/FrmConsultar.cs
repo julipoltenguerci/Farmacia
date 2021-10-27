@@ -69,12 +69,30 @@ namespace Presentacion.Formularios
 			}
 			
 		}
-		private void CargarGrilla(List<Factura> lst)
+		private void CargarParamFiltros(List<Factura> lst)
 		{
-			foreach (Factura item in lst)
+			List<Parametro> filtros = new List<Parametro>();
+			filtros.Add(new Parametro("@fechaDesde", dtpFechaDesde.Value));
+			filtros.Add(new Parametro("@fechaHasta", dtpFechaHasta.Value));
+
+			object filtroTexto = DBNull.Value;
+			if (!String.IsNullOrEmpty(txtFiltro.Text))
+				filtroTexto = txtFiltro.Text;
+			if (cboFiltro.SelectedIndex == 0)
 			{
-				dgvConsulta.Rows.Add(new object[] { item.IdFactura, item.Fecha.ToString("dd/MM/yyyy"), item.Cliente.ToString(), item.Total, ""/*item.GetFechaBajaFormato()*/ });
+				filtros.Add(new Parametro("@nroFactura", filtroTexto));
 			}
+			else
+			{
+				filtros.Add(new Parametro("@cliente", filtroTexto));
+			}
+
+			string conInactivos = "N";
+			if (chkBajas.Checked)
+				conInactivos = "S";
+			filtros.Add(new Parametro("@activo", conInactivos));
+
+			filtros.Add(new Parametro("@tipo", cboFiltro.SelectedIndex));
 		}
 		private void CargarFiltroFecha()
 		{
