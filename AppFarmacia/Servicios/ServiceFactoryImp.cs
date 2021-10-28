@@ -11,12 +11,15 @@ namespace Servicios
 {
 	public class ServiceFactoryImp : AbstractServiceFactory
 	{
-		public override IService CrearService(AbstractDaoFactory factory)
+		public override IServiceFactura CrearFacturaService(AbstractDaoFactory factory)
 		{
 			return new FacturaService(factory);
 		}
 
-
+		public override IServicePedido CrearPedidoService(AbstractDaoFactory factory)
+		{
+			return new PedidoService(factory);
+		}
 
 
 	}

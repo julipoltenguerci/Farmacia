@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Implementaciones
 {
-	class PedidoDao : IDao
+	class PedidoDao : IPedidoDao
 	{
-        public List<object> GetByFilters(List<Parametro> parametros)
+        public List<Pedido> GetByFilters(List<Parametro> parametros)
         {
-			List<object> lst = new List<object>();
+			List<Pedido> lst = new List<Pedido>();
 			
 			try
 			{

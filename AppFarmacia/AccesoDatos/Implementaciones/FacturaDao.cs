@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Implementaciones
 {
-	class FacturaDao : IDao
+	class FacturaDao : IFacturaDao
 	{   
-        public List<object> GetByFilters(List<Parametro> parametros)
+        public List<Factura> GetByFilters(List<Parametro> parametros)
         {
             
-            List<object> lst = new List<object>();
+            List<Factura> lst = new List<Factura>();
 
             try
             {   
