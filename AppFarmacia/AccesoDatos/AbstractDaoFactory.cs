@@ -9,8 +9,8 @@ namespace AccesoDatos
 {
 	public abstract class AbstractDaoFactory
 	{
-		public abstract IDao CrearFacturaDao();
-		public abstract IDao CrearPedidoDao();
+		public abstract IFacturaDao CrearFacturaDao();
+		public abstract IPedidoDao CrearPedidoDao();
 
 	}
 }

@@ -8,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Interfaces
 {
-	public interface IDao
+	public interface IFacturaDao
 	{
-        List<object> GetByFilters(List<Parametro> parametro);
-
-        //List<Factura> GetByFilters(List<Parametro> parametros);
-     
-    }
+		List<Factura> GetByFilters(List<Parametro> parametros);
+	}
 }

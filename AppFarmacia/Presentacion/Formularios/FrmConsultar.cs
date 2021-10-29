@@ -19,14 +19,22 @@ namespace Presentacion.Formularios
 {   
 	public partial class FrmConsultar : Form
 	{
-		private IService gestor;
+		private IServiceFactura gestorFactura;
+		private IServicePedido gestorPedido;
 		private Accion modo;
 		
 		public FrmConsultar(Accion modo)
 		{
 			InitializeComponent();
-			gestor = new ServiceFactoryImp().CrearService(new DaoFactoryImp());
 			this.modo = modo;
+			if (modo.Equals(Accion.Factura))
+			{
+				gestorFactura = new ServiceFactoryImp().CrearFacturaService(new DaoFactoryImp());
+			}
+			if (modo.Equals(Accion.Pedido))
+			{ 
+				gestorPedido = new ServiceFactoryImp().CrearPedidoService(new DaoFactoryImp());
+			}
 		}
 
 		private void FrmConsultar_Load(object sender, EventArgs e)
@@ -51,14 +59,14 @@ namespace Presentacion.Formularios
 		private void CargarGrillaConPedidos()
 		{
 			
-			List<object> lstOb = new List<object>();
+			List<Pedido> lst = new List<Pedido>();
 			List<Parametro> filtros = CargarParametros(Accion.Pedido);
 
 			dgvConsulta.Rows.Clear();
-			lstOb = gestor.GetByFilters(filtros,Accion.Pedido);
+			lst = gestorPedido.GetPedidosByFilters(filtros);
 
 
-			foreach (Pedido item in lstOb)
+			foreach (Pedido item in lst)
 			{
 				dgvConsulta.Rows.Add(new object[] { item.IdPedido, item.Fpedido.ToString("dd/MM/yyyy"), item.ProveedorPedido.NombreProveedor.ToString(), item.Total.ToString(), ""/*item.GetFechaBajaFormato()*/ }) ;
 			}
@@ -67,15 +75,15 @@ namespace Presentacion.Formularios
 
 		private void CargarGrillaConFacturas()
 		{
-			List<object> oLst = new List<object>();
+			List<Factura> lst = new List<Factura>();
 
 			List<Parametro> filtros=CargarParametros(Accion.Factura);
 
 			dgvConsulta.Rows.Clear();
-			oLst =gestor.GetByFilters(filtros,Accion.Factura);
+			lst =gestorFactura.GetFacturasByFilters(filtros);
 
 
-			foreach (Factura item in oLst)
+			foreach (Factura item in lst)
 			{
 				dgvConsulta.Rows.Add(new object[] { item.IdFactura, item.Fecha.ToString("dd/MM/yyyy"), item.Cliente.ToString(), item.Total, ""/*item.GetFechaBajaFormato()*/ });
 			}

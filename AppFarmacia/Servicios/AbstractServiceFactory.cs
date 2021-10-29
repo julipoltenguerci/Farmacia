@@ -10,6 +10,7 @@ namespace Servicios
 {
 	public abstract class AbstractServiceFactory
 	{
-		public abstract IService CrearService(AbstractDaoFactory factory);
+		public abstract IServiceFactura CrearFacturaService(AbstractDaoFactory factory);
+		public abstract IServicePedido CrearPedidoService(AbstractDaoFactory factory);
 	}
 }
