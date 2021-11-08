@@ -10,11 +10,11 @@ namespace AccesoDatos
 {
 	public class DaoFactoryImp : AbstractDaoFactory
 	{
-		public override IDao CrearFacturaDao()
+		public override IFacturaDao CrearFacturaDao()
 		{
 			return new FacturaDao();
 		}
-		public override IDao CrearPedidoDao()
+		public override IPedidoDao CrearPedidoDao()
 		{
 			return new PedidoDao();
 		}

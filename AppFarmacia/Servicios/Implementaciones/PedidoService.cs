@@ -8,23 +8,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Dominio.Enumeracion;
 
 namespace Servicios.Implementaciones
-{   
-	class FacturaService:IServiceFactura
+{
+	class PedidoService:IServicePedido
 	{
-		private IFacturaDao dao;
+		private IPedidoDao dao;
 
-		public FacturaService(AbstractDaoFactory factory)
+		public PedidoService(AbstractDaoFactory factory)
 		{
-			dao = factory.CrearFacturaDao();
+			dao = factory.CrearPedidoDao();
 		}
 
-		public List<Factura> GetFacturasByFilters(List<Parametro> parametros)
-		{   
+		public List<Pedido> GetPedidosByFilters(List<Parametro> parametros)
+		{
 			return dao.GetByFilters(parametros);
 		}
-
-    }
+	}
 }

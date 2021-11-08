@@ -1,7 +1,5 @@
---Creación de la base de datos "Farmacia"
-create database Farmacia
-go
-use Farmacia
+
+use db_Farmacia
 go
 create table Provincias
 (
@@ -203,7 +201,7 @@ create table Detalles_Facturas
 	constraint fk_id_df_autorizacion foreign key (id_autorizacion) references Autorizaciones(id_autorizacion)
 )
 go
-alter PROCEDURE PA_CONSULTA_FACTURAS_FILTRO
+create PROCEDURE PA_CONSULTA_FACTURAS_FILTRO
 @nroFactura int=null,
 @fechaDesde date=null,
 @fechaHasta date=null,
@@ -250,4 +248,51 @@ AS
 			JOIN Detalles_Facturas df ON df.id_factura=f.id_factura
 		WHERE 'fecha_baja' is not null
 		GROUP BY f.id_factura,convert(varchar,f.fecha_factura,3),c.ape_cliente,c.nom_cliente
+go
+CREATE PROCEDURE PA_CONSULTA_PEDIDO_FILTRO
+@nroPedido int=null,
+@fechaDesde date=null,
+@fechaHasta date=null,
+@Proveedor varchar(150)=null,
+@tipo int=null,
+@activo varchar(1)
+AS
+	 if @tipo=0 --filtro por numero Pedido
+
+	select p.id_pedido, convert(varchar,
+			fecha_pedido,3) fecha, 
+			nom_proveedor, 
+			sum(precio_compra*cantidad)Total, 
+			'fecha_baja' fechaB
+	from Pedidos p  join Detalles_Pedidos dp  on dp.id_pedido=p.id_pedido
+      join Proveedores pr on p.id_proveedor=pr.id_proveedor
+	WHERE  ((@fechaDesde is null and @fechaHasta is  null) OR (fecha_pedido between @fechaDesde and @fechaHasta))
+		 AND(@nroPedido is null OR p.id_pedido=@nroPedido)
+		 AND (@activo is null OR (@activo = 'S') OR (@activo = 'N'))--(@activo = 'N' and 'fecha_baja' IS  NULL))
+		 GROUP BY p.id_pedido, convert(varchar,fecha_pedido,3), nom_proveedor       
+     
+	 if @tipo=1 --filtro por Proveedor
+		 select p.id_pedido, convert(varchar,
+			fecha_pedido,3) fecha, 
+			nom_proveedor, 
+			sum(precio_compra*cantidad)Total, 
+			'fecha_baja' fechaB
+	     from Pedidos p  join Detalles_Pedidos dp  on dp.id_pedido=p.id_pedido
+         join Proveedores pr on p.id_proveedor=pr.id_proveedor
+		 WHERE 
+		 ((@fechaDesde is null and @fechaHasta is  null) OR (fecha_pedido between @fechaDesde and @fechaHasta))
+		 AND(@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+		 AND (@activo is null OR (@activo = 'S') OR (@activo = 'N'))--(@activo = 'N' and 'fecha_baja' IS  NULL))
+		 GROUP BY p.id_pedido, convert(varchar,fecha_pedido,3), nom_proveedor   
+
+    if @tipo=2 --filtro por bajas
+	     select p.id_pedido, convert(varchar,
+			fecha_pedido,3) fecha, 
+			nom_proveedor, 
+			sum(precio_compra*cantidad)Total , 
+			'fecha_baja' fechaB
+	     from Pedidos p  join Detalles_Pedidos dp  on dp.id_pedido=p.id_pedido
+         join Proveedores pr on p.id_proveedor=pr.id_proveedor
+		 WHERE 'fecha_baja' is not null
+	    GROUP BY p.id_pedido, convert(varchar,fecha_pedido,3), nom_proveedor   
 go

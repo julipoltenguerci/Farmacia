@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidades
 {
-    class Proveedores
+    public class Proveedor
     {
         public int IdProveedor { get; set; }
         public string NombreProveedor { get; set; }
@@ -18,7 +18,7 @@ namespace Dominio.Entidades
 
         public Barrio BarrioProv { get; set; }
 
-        public Proveedores(int idProveedor, string nombreProveedor, string razonSocial, string cuit, string calle, int altura,Barrio barrio)
+        public Proveedor(int idProveedor, string nombreProveedor, string razonSocial, string cuit, string calle, int altura,Barrio barrio)
         {
             IdProveedor = idProveedor;
             NombreProveedor = nombreProveedor;
@@ -27,6 +27,10 @@ namespace Dominio.Entidades
             CalleProv = calle;
             AlturaProv = altura;
             BarrioProv = barrio;
+        }
+
+        public Proveedor()
+        {
         }
     }
 }
