@@ -29,278 +29,193 @@ namespace Presentacion
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.menuFarmacia = new System.Windows.Forms.MenuStrip();
-			this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-			this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.editarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-			this.borrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.sucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.sucursalesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.responsablesProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.descuentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.responsablesProveedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.medicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.obrasSocialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.tiposSuministrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.tiposSuministrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.menuFarmacia.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// menuFarmacia
-			// 
-			this.menuFarmacia.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.editarToolStripMenuItem1,
-            this.eliminarToolStripMenuItem,
-            this.proveedoresToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
-            this.sucursalesToolStripMenuItem});
-			this.menuFarmacia.Location = new System.Drawing.Point(0, 0);
-			this.menuFarmacia.Name = "menuFarmacia";
-			this.menuFarmacia.Size = new System.Drawing.Size(800, 24);
-			this.menuFarmacia.TabIndex = 0;
-			this.menuFarmacia.Text = "menuStrip1";
-			// 
-			// archivoToolStripMenuItem
-			// 
-			this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem,
-            this.editarToolStripMenuItem2,
-            this.borrarToolStripMenuItem,
-            this.salirToolStripMenuItem});
-			this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-			this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-			this.archivoToolStripMenuItem.Text = "Archivo";
-			// 
-			// nuevoToolStripMenuItem
-			// 
-			this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-			this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-			this.nuevoToolStripMenuItem.Text = "Nuevo";
-			// 
-			// editarToolStripMenuItem2
-			// 
-			this.editarToolStripMenuItem2.Name = "editarToolStripMenuItem2";
-			this.editarToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
-			this.editarToolStripMenuItem2.Text = "Editar";
-			// 
-			// borrarToolStripMenuItem
-			// 
-			this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
-			this.borrarToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-			this.borrarToolStripMenuItem.Text = "Borrar";
-			// 
-			// salirToolStripMenuItem
-			// 
-			this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-			this.salirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-			this.salirToolStripMenuItem.Text = "Salir";
-			// 
-			// editarToolStripMenuItem
-			// 
-			this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarToolStripMenuItem,
-            this.nuevoToolStripMenuItem1,
-            this.editarToolStripMenuItem3,
-            this.borrarToolStripMenuItem1});
-			this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-			this.editarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-			this.editarToolStripMenuItem.Text = "Facturas";
-			// 
-			// consultarToolStripMenuItem
-			// 
-			this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-			this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.consultarToolStripMenuItem.Text = "Consultar";
-			this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
-			// 
-			// nuevoToolStripMenuItem1
-			// 
-			this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-			this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
-			this.nuevoToolStripMenuItem1.Text = "Nuevo";
-			// 
-			// editarToolStripMenuItem3
-			// 
-			this.editarToolStripMenuItem3.Name = "editarToolStripMenuItem3";
-			this.editarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
-			this.editarToolStripMenuItem3.Text = "Editar";
-			// 
-			// borrarToolStripMenuItem1
-			// 
-			this.borrarToolStripMenuItem1.Name = "borrarToolStripMenuItem1";
-			this.borrarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
-			this.borrarToolStripMenuItem1.Text = "Borrar";
-			// 
-			// editarToolStripMenuItem1
-			// 
-			this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-			this.editarToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
-			this.editarToolStripMenuItem1.Text = "Pedidos";
-			// 
-			// eliminarToolStripMenuItem
-			// 
-			this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-			this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-			this.eliminarToolStripMenuItem.Text = "Suministros";
-			// 
-			// proveedoresToolStripMenuItem
-			// 
-			this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-			this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-			this.proveedoresToolStripMenuItem.Text = "Proveedores";
-			// 
-			// clientesToolStripMenuItem
-			// 
-			this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-			this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-			this.clientesToolStripMenuItem.Text = "Clientes";
-			// 
-			// empleadosToolStripMenuItem
-			// 
-			this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-			this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-			this.empleadosToolStripMenuItem.Text = "Empleados";
-			// 
-			// sucursalesToolStripMenuItem
-			// 
-			this.sucursalesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sucursalesToolStripMenuItem1,
-            this.responsablesProveedorToolStripMenuItem,
-            this.descuentosToolStripMenuItem,
-            this.responsablesProveedorToolStripMenuItem1,
-            this.localidadesToolStripMenuItem,
-            this.medicosToolStripMenuItem,
-            this.obrasSocialesToolStripMenuItem,
-            this.provinciasToolStripMenuItem,
-            this.tiposSuministrosToolStripMenuItem,
-            this.tiposSuministrosToolStripMenuItem1});
-			this.sucursalesToolStripMenuItem.Name = "sucursalesToolStripMenuItem";
-			this.sucursalesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-			this.sucursalesToolStripMenuItem.Text = "Extra";
-			// 
-			// sucursalesToolStripMenuItem1
-			// 
-			this.sucursalesToolStripMenuItem1.Name = "sucursalesToolStripMenuItem1";
-			this.sucursalesToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-			this.sucursalesToolStripMenuItem1.Text = "Autorizaciones";
-			// 
-			// responsablesProveedorToolStripMenuItem
-			// 
-			this.responsablesProveedorToolStripMenuItem.Name = "responsablesProveedorToolStripMenuItem";
-			this.responsablesProveedorToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.responsablesProveedorToolStripMenuItem.Text = "Barrios";
-			// 
-			// descuentosToolStripMenuItem
-			// 
-			this.descuentosToolStripMenuItem.Name = "descuentosToolStripMenuItem";
-			this.descuentosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.descuentosToolStripMenuItem.Text = "Descuentos";
-			// 
-			// responsablesProveedorToolStripMenuItem1
-			// 
-			this.responsablesProveedorToolStripMenuItem1.Name = "responsablesProveedorToolStripMenuItem1";
-			this.responsablesProveedorToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-			this.responsablesProveedorToolStripMenuItem1.Text = "Responsables Proveedor";
-			// 
-			// localidadesToolStripMenuItem
-			// 
-			this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
-			this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.localidadesToolStripMenuItem.Text = "Localidades";
-			// 
-			// medicosToolStripMenuItem
-			// 
-			this.medicosToolStripMenuItem.Name = "medicosToolStripMenuItem";
-			this.medicosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.medicosToolStripMenuItem.Text = "Medicos";
-			// 
-			// obrasSocialesToolStripMenuItem
-			// 
-			this.obrasSocialesToolStripMenuItem.Name = "obrasSocialesToolStripMenuItem";
-			this.obrasSocialesToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.obrasSocialesToolStripMenuItem.Text = "Obras sociales";
-			// 
-			// provinciasToolStripMenuItem
-			// 
-			this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
-			this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.provinciasToolStripMenuItem.Text = "Provincias";
-			// 
-			// tiposSuministrosToolStripMenuItem
-			// 
-			this.tiposSuministrosToolStripMenuItem.Name = "tiposSuministrosToolStripMenuItem";
-			this.tiposSuministrosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.tiposSuministrosToolStripMenuItem.Text = "Tipos Condiciones Venta";
-			// 
-			// tiposSuministrosToolStripMenuItem1
-			// 
-			this.tiposSuministrosToolStripMenuItem1.Name = "tiposSuministrosToolStripMenuItem1";
-			this.tiposSuministrosToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-			this.tiposSuministrosToolStripMenuItem1.Text = "Tipos Suministros";
-			// 
-			// FrmPrincipal
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.menuFarmacia);
-			this.MainMenuStrip = this.menuFarmacia;
-			this.Name = "FrmPrincipal";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Farmacia";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.menuFarmacia.ResumeLayout(false);
-			this.menuFarmacia.PerformLayout();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnConocenos = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelBar = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelChild = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
+            this.panelBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelMenu.Controls.Add(this.button4);
+            this.panelMenu.Controls.Add(this.btnConocenos);
+            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Location = new System.Drawing.Point(0, 89);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(176, 512);
+            this.panelMenu.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = global::Presentacion.Properties.Resources.ico_cerrar_sesion;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(3, 448);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(176, 64);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Cerrar Sesión";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // btnConocenos
+            // 
+            this.btnConocenos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConocenos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConocenos.FlatAppearance.BorderSize = 0;
+            this.btnConocenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConocenos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConocenos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConocenos.Image = global::Presentacion.Properties.Resources.ico_fcia;
+            this.btnConocenos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConocenos.Location = new System.Drawing.Point(0, 150);
+            this.btnConocenos.Name = "btnConocenos";
+            this.btnConocenos.Size = new System.Drawing.Size(176, 64);
+            this.btnConocenos.TabIndex = 2;
+            this.btnConocenos.Text = "Conocenos";
+            this.btnConocenos.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(0, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 70);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "A Definir";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = global::Presentacion.Properties.Resources.ico_consultas;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 80);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Consultas";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panelBar
+            // 
+            this.panelBar.BackColor = System.Drawing.Color.Gray;
+            this.panelBar.Controls.Add(this.btnMinimize);
+            this.panelBar.Controls.Add(this.btnClose);
+            this.panelBar.Controls.Add(this.pictureBox1);
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(999, 89);
+            this.panelBar.TabIndex = 1;
+            this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.White;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = global::Presentacion.Properties.Resources.ic_min;
+            this.btnMinimize.Location = new System.Drawing.Point(945, 11);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(20, 18);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 5;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Presentacion.Properties.Resources.ic_close;
+            this.btnClose.Location = new System.Drawing.Point(969, 11);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 18);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.Faramaceutica_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(478, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelChild
+            // 
+            this.panelChild.BackColor = System.Drawing.Color.White;
+            this.panelChild.Location = new System.Drawing.Point(174, 89);
+            this.panelChild.Name = "panelChild";
+            this.panelChild.Size = new System.Drawing.Size(825, 486);
+            this.panelChild.TabIndex = 2;
+            // 
+            // FrmPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.panelChild);
+            this.Controls.Add(this.panelBar);
+            this.Controls.Add(this.panelMenu);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestion Farmaceutica";
+            this.panelMenu.ResumeLayout(false);
+            this.panelBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.MenuStrip menuFarmacia;
-		private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem2;
-		private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem sucursalesToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem sucursalesToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem responsablesProveedorToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem descuentosToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem responsablesProveedorToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem medicosToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem obrasSocialesToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem provinciasToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem tiposSuministrosToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem tiposSuministrosToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem3;
-		private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem1;
-	}
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panelBar;
+        private System.Windows.Forms.Button btnConocenos;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox btnMinimize;
+        private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.Panel panelChild;
+    }
 }
 
