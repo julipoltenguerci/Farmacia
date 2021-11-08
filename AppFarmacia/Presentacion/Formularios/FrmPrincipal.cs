@@ -19,15 +19,40 @@ namespace Presentacion
 			InitializeComponent();
 		}
 
-		private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			new FrmConsultar(Accion.Factura).ShowDialog();
-		}
-
-        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
-			new FrmConsultar(Accion.Pedido).ShowDialog();
-		}
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de abandonar la aplicación?",
+               "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+               MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+
+        //private void btnConocenos_Click(object sender, EventArgs e)
+        //{
+        //    OpenChildForm(new FrmConocenos(), sender);
+        //}
+
+
+        //private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //	new FrmConsultar(Accion.Factura).ShowDialog();
+        //}
+
+        //      private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        //      {
+        //	new FrmConsultar(Accion.Pedido).ShowDialog();
+        //}
 
     }
 }
