@@ -52,7 +52,23 @@ namespace AccesoDatos.Implementaciones
             return lst;
         }
 
-       
-        
+        public DataTable GetFacturasAfiliados(List<Parametro> parametros)
+        {
+
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_COMPRAS_AFILIADOS", parametros);
+
+                return tabla;
+            }
+            catch (SqlException)
+            {
+                tabla = null;
+            }
+            return tabla;
+        }
+
     }
 }

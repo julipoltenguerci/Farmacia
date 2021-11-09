@@ -63,9 +63,9 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Faramaceutica_logo {
+        internal static System.Drawing.Bitmap Faramac_logo {
             get {
-                object obj = ResourceManager.GetObject("Faramaceutica_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("Faramac_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,16 +103,6 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ico_cerrar_sesion {
-            get {
-                object obj = ResourceManager.GetObject("ico_cerrar_sesion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ico_consultas {
             get {
                 object obj = ResourceManager.GetObject("ico_consultas", resourceCulture);
@@ -123,9 +113,19 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ico_fcia {
+        internal static System.Drawing.Bitmap icono_cerrarsesion {
             get {
-                object obj = ResourceManager.GetObject("ico_fcia", resourceCulture);
+                object obj = ResourceManager.GetObject("icono_cerrarsesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_fcia {
+            get {
+                object obj = ResourceManager.GetObject("icono_fcia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
