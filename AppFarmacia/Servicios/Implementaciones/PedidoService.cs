@@ -1,6 +1,7 @@
 ﻿using AccesoDatos;
 using AccesoDatos.Interfaces;
 using Dominio;
+using Dominio.Dto;
 using Dominio.Entidades;
 using Servicios.Interfaces;
 using System;
@@ -18,6 +19,11 @@ namespace Servicios.Implementaciones
 		public PedidoService(AbstractDaoFactory factory)
 		{
 			dao = factory.CrearPedidoDao();
+		}
+
+		public List<TipoSuminstroDto> CantTipoSuministro(List<Parametro> parametros)
+		{
+			return dao.GetCantTipoSuministro(parametros);
 		}
 
 		public List<Pedido> GetPedidosByFilters(List<Parametro> parametros)

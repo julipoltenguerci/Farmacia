@@ -1,5 +1,6 @@
 ﻿using AccesoDatos.Interfaces;
 using Dominio;
+using Dominio.Dto;
 using Dominio.Entidades;
 using System;
 using System.Collections.Generic;
@@ -51,8 +52,32 @@ namespace AccesoDatos.Implementaciones
 			return lst;
 		}
 
+		public List<TipoSuminstroDto> GetCantTipoSuministro(List<Parametro> parametros)
+		{
+			List<TipoSuminstroDto> lst = new List<TipoSuminstroDto>();
 
-	
+			try
+			{
+				DataTable tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CONSULTA3_TIPO_SUMINISTRO", parametros);
+				//falta terminar el sp
+				foreach (DataRow row in tabla.Rows)
+				{
+					TipoSuminstroDto tipoSuminstroDto = new TipoSuminstroDto();
 
+					tipoSuminstroDto.Anio = Convert.ToInt32(row["Anio"].ToString());
+					tipoSuminstroDto.Mes = Convert.ToInt32(row["Mes"].ToString());
+					tipoSuminstroDto.TipoSuministro = row["TipoSuministro"].ToString();
+					tipoSuminstroDto.CantTipoSuministro = Convert.ToInt32(row["CantidadTotal"].ToString());
+					
+
+					lst.Add(tipoSuminstroDto);
+				}
+			}
+			catch (SqlException)
+			{
+				lst = null;
+			}
+			return lst;
+		}
 	}
 }

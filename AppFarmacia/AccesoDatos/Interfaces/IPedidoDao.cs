@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.Dto;
 using Dominio.Entidades;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,6 @@ namespace AccesoDatos.Interfaces
         //List<object> GetByFilters(List<Parametro> parametro);
 
         List<Pedido> GetByFilters(List<Parametro> parametros);
-     
-    }
+		List<TipoSuminstroDto> GetCantTipoSuministro(List<Parametro> parametros);
+	}
 }

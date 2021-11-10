@@ -12,9 +12,15 @@ namespace Presentacion.Formularios
 {
 	public partial class FrmConsulta3 : Form
 	{
+
 		public FrmConsulta3()
 		{
 			InitializeComponent();
+		}
+
+		private void FrmConsulta3_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

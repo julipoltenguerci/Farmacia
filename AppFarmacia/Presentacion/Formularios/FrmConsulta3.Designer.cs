@@ -42,16 +42,16 @@ namespace Presentacion.Formularios
 			this.lblFechaDesde = new System.Windows.Forms.Label();
 			this.cboFiltroFecha = new System.Windows.Forms.ComboBox();
 			this.lblFiltroFecha = new System.Windows.Forms.Label();
-			this.cAnio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cTipoSumin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cCantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.chkAnio = new System.Windows.Forms.CheckBox();
 			this.chkMes = new System.Windows.Forms.CheckBox();
 			this.chkTipoSum = new System.Windows.Forms.CheckBox();
 			this.chkProv = new System.Windows.Forms.CheckBox();
 			this.lblAgrupamiento = new System.Windows.Forms.Label();
+			this.cAnio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cTipoSumin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cCantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -86,17 +86,17 @@ namespace Presentacion.Formularios
             this.cProveedor,
             this.cTipoSumin,
             this.cCantTotal});
-			this.dgvConsulta.Location = new System.Drawing.Point(24, 185);
+			this.dgvConsulta.Location = new System.Drawing.Point(12, 185);
 			this.dgvConsulta.Name = "dgvConsulta";
 			this.dgvConsulta.ReadOnly = true;
 			this.dgvConsulta.RowHeadersVisible = false;
 			this.dgvConsulta.RowTemplate.Height = 25;
-			this.dgvConsulta.Size = new System.Drawing.Size(640, 388);
+			this.dgvConsulta.Size = new System.Drawing.Size(785, 250);
 			this.dgvConsulta.TabIndex = 31;
 			// 
 			// btnConsultar
 			// 
-			this.btnConsultar.Location = new System.Drawing.Point(577, 84);
+			this.btnConsultar.Location = new System.Drawing.Point(644, 85);
 			this.btnConsultar.Name = "btnConsultar";
 			this.btnConsultar.Size = new System.Drawing.Size(75, 23);
 			this.btnConsultar.TabIndex = 26;
@@ -105,7 +105,7 @@ namespace Presentacion.Formularios
 			// 
 			// txtFiltro
 			// 
-			this.txtFiltro.Location = new System.Drawing.Point(285, 84);
+			this.txtFiltro.Location = new System.Drawing.Point(352, 85);
 			this.txtFiltro.Name = "txtFiltro";
 			this.txtFiltro.Size = new System.Drawing.Size(282, 23);
 			this.txtFiltro.TabIndex = 25;
@@ -114,7 +114,7 @@ namespace Presentacion.Formularios
 			// 
 			this.cboFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboFiltro.FormattingEnabled = true;
-			this.cboFiltro.Location = new System.Drawing.Point(41, 85);
+			this.cboFiltro.Location = new System.Drawing.Point(108, 86);
 			this.cboFiltro.Name = "cboFiltro";
 			this.cboFiltro.Size = new System.Drawing.Size(223, 23);
 			this.cboFiltro.TabIndex = 24;
@@ -122,7 +122,7 @@ namespace Presentacion.Formularios
 			// lblFiltro
 			// 
 			this.lblFiltro.AutoSize = true;
-			this.lblFiltro.Location = new System.Drawing.Point(41, 65);
+			this.lblFiltro.Location = new System.Drawing.Point(108, 66);
 			this.lblFiltro.Name = "lblFiltro";
 			this.lblFiltro.Size = new System.Drawing.Size(97, 15);
 			this.lblFiltro.TabIndex = 23;
@@ -131,7 +131,7 @@ namespace Presentacion.Formularios
 			// dtpFechaHasta
 			// 
 			this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpFechaHasta.Location = new System.Drawing.Point(441, 24);
+			this.dtpFechaHasta.Location = new System.Drawing.Point(508, 25);
 			this.dtpFechaHasta.Name = "dtpFechaHasta";
 			this.dtpFechaHasta.Size = new System.Drawing.Size(126, 23);
 			this.dtpFechaHasta.TabIndex = 22;
@@ -139,7 +139,7 @@ namespace Presentacion.Formularios
 			// lblFechaHasta
 			// 
 			this.lblFechaHasta.AutoSize = true;
-			this.lblFechaHasta.Location = new System.Drawing.Point(441, 6);
+			this.lblFechaHasta.Location = new System.Drawing.Point(508, 7);
 			this.lblFechaHasta.Name = "lblFechaHasta";
 			this.lblFechaHasta.Size = new System.Drawing.Size(40, 15);
 			this.lblFechaHasta.TabIndex = 21;
@@ -148,7 +148,7 @@ namespace Presentacion.Formularios
 			// dtpFechaDesde
 			// 
 			this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpFechaDesde.Location = new System.Drawing.Point(285, 24);
+			this.dtpFechaDesde.Location = new System.Drawing.Point(352, 25);
 			this.dtpFechaDesde.Name = "dtpFechaDesde";
 			this.dtpFechaDesde.Size = new System.Drawing.Size(126, 23);
 			this.dtpFechaDesde.TabIndex = 20;
@@ -156,7 +156,7 @@ namespace Presentacion.Formularios
 			// lblFechaDesde
 			// 
 			this.lblFechaDesde.AutoSize = true;
-			this.lblFechaDesde.Location = new System.Drawing.Point(285, 6);
+			this.lblFechaDesde.Location = new System.Drawing.Point(352, 7);
 			this.lblFechaDesde.Name = "lblFechaDesde";
 			this.lblFechaDesde.Size = new System.Drawing.Size(42, 15);
 			this.lblFechaDesde.TabIndex = 19;
@@ -166,7 +166,7 @@ namespace Presentacion.Formularios
 			// 
 			this.cboFiltroFecha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboFiltroFecha.FormattingEnabled = true;
-			this.cboFiltroFecha.Location = new System.Drawing.Point(41, 24);
+			this.cboFiltroFecha.Location = new System.Drawing.Point(108, 25);
 			this.cboFiltroFecha.Name = "cboFiltroFecha";
 			this.cboFiltroFecha.Size = new System.Drawing.Size(223, 23);
 			this.cboFiltroFecha.TabIndex = 18;
@@ -174,25 +174,78 @@ namespace Presentacion.Formularios
 			// lblFiltroFecha
 			// 
 			this.lblFiltroFecha.AutoSize = true;
-			this.lblFiltroFecha.Location = new System.Drawing.Point(41, 6);
+			this.lblFiltroFecha.Location = new System.Drawing.Point(108, 7);
 			this.lblFiltroFecha.Name = "lblFiltroFecha";
 			this.lblFiltroFecha.Size = new System.Drawing.Size(87, 15);
 			this.lblFiltroFecha.TabIndex = 17;
 			this.lblFiltroFecha.Text = "Filtro por fecha";
 			// 
+			// chkAnio
+			// 
+			this.chkAnio.AutoSize = true;
+			this.chkAnio.Location = new System.Drawing.Point(110, 161);
+			this.chkAnio.Name = "chkAnio";
+			this.chkAnio.Size = new System.Drawing.Size(48, 19);
+			this.chkAnio.TabIndex = 34;
+			this.chkAnio.Text = "Año";
+			this.chkAnio.UseVisualStyleBackColor = true;
+			// 
+			// chkMes
+			// 
+			this.chkMes.AutoSize = true;
+			this.chkMes.Location = new System.Drawing.Point(175, 161);
+			this.chkMes.Name = "chkMes";
+			this.chkMes.Size = new System.Drawing.Size(48, 19);
+			this.chkMes.TabIndex = 35;
+			this.chkMes.Text = "Mes";
+			this.chkMes.UseVisualStyleBackColor = true;
+			// 
+			// chkTipoSum
+			// 
+			this.chkTipoSum.AutoSize = true;
+			this.chkTipoSum.Location = new System.Drawing.Point(240, 161);
+			this.chkTipoSum.Name = "chkTipoSum";
+			this.chkTipoSum.Size = new System.Drawing.Size(109, 19);
+			this.chkTipoSum.TabIndex = 36;
+			this.chkTipoSum.Text = "Tipo Suministro";
+			this.chkTipoSum.UseVisualStyleBackColor = true;
+			// 
+			// chkProv
+			// 
+			this.chkProv.AutoSize = true;
+			this.chkProv.Location = new System.Drawing.Point(366, 161);
+			this.chkProv.Name = "chkProv";
+			this.chkProv.Size = new System.Drawing.Size(80, 19);
+			this.chkProv.TabIndex = 37;
+			this.chkProv.Text = "Proveedor";
+			this.chkProv.UseVisualStyleBackColor = true;
+			// 
+			// lblAgrupamiento
+			// 
+			this.lblAgrupamiento.AutoSize = true;
+			this.lblAgrupamiento.Location = new System.Drawing.Point(108, 125);
+			this.lblAgrupamiento.Name = "lblAgrupamiento";
+			this.lblAgrupamiento.Size = new System.Drawing.Size(110, 15);
+			this.lblAgrupamiento.TabIndex = 38;
+			this.lblAgrupamiento.Text = "Tipo Agrupamiento";
+			// 
 			// cAnio
 			// 
-			this.cAnio.FillWeight = 96.22253F;
+			this.cAnio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.cAnio.FillWeight = 203.0457F;
 			this.cAnio.HeaderText = "Año";
 			this.cAnio.Name = "cAnio";
 			this.cAnio.ReadOnly = true;
+			this.cAnio.Width = 54;
 			// 
 			// cMes
 			// 
-			this.cMes.FillWeight = 105.0101F;
+			this.cMes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.cMes.FillWeight = 68.08337F;
 			this.cMes.HeaderText = "Mes";
 			this.cMes.Name = "cMes";
 			this.cMes.ReadOnly = true;
+			this.cMes.Width = 54;
 			// 
 			// cProveedor
 			// 
@@ -203,72 +256,25 @@ namespace Presentacion.Formularios
 			// 
 			// cTipoSumin
 			// 
-			this.cTipoSumin.FillWeight = 98.92434F;
+			this.cTipoSumin.FillWeight = 64.13766F;
 			this.cTipoSumin.HeaderText = "Tipo Suministro";
 			this.cTipoSumin.Name = "cTipoSumin";
 			this.cTipoSumin.ReadOnly = true;
 			// 
 			// cCantTotal
 			// 
-			this.cCantTotal.FillWeight = 99.84301F;
+			this.cCantTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.cCantTotal.FillWeight = 64.73328F;
 			this.cCantTotal.HeaderText = "Cantidad Total";
 			this.cCantTotal.Name = "cCantTotal";
 			this.cCantTotal.ReadOnly = true;
-			// 
-			// chkAnio
-			// 
-			this.chkAnio.AutoSize = true;
-			this.chkAnio.Location = new System.Drawing.Point(43, 160);
-			this.chkAnio.Name = "chkAnio";
-			this.chkAnio.Size = new System.Drawing.Size(48, 19);
-			this.chkAnio.TabIndex = 34;
-			this.chkAnio.Text = "Año";
-			this.chkAnio.UseVisualStyleBackColor = true;
-			// 
-			// chkMes
-			// 
-			this.chkMes.AutoSize = true;
-			this.chkMes.Location = new System.Drawing.Point(108, 160);
-			this.chkMes.Name = "chkMes";
-			this.chkMes.Size = new System.Drawing.Size(48, 19);
-			this.chkMes.TabIndex = 35;
-			this.chkMes.Text = "Mes";
-			this.chkMes.UseVisualStyleBackColor = true;
-			// 
-			// chkTipoSum
-			// 
-			this.chkTipoSum.AutoSize = true;
-			this.chkTipoSum.Location = new System.Drawing.Point(173, 160);
-			this.chkTipoSum.Name = "chkTipoSum";
-			this.chkTipoSum.Size = new System.Drawing.Size(109, 19);
-			this.chkTipoSum.TabIndex = 36;
-			this.chkTipoSum.Text = "Tipo Suministro";
-			this.chkTipoSum.UseVisualStyleBackColor = true;
-			// 
-			// chkProv
-			// 
-			this.chkProv.AutoSize = true;
-			this.chkProv.Location = new System.Drawing.Point(299, 160);
-			this.chkProv.Name = "chkProv";
-			this.chkProv.Size = new System.Drawing.Size(80, 19);
-			this.chkProv.TabIndex = 37;
-			this.chkProv.Text = "Proveedor";
-			this.chkProv.UseVisualStyleBackColor = true;
-			// 
-			// lblAgrupamiento
-			// 
-			this.lblAgrupamiento.AutoSize = true;
-			this.lblAgrupamiento.Location = new System.Drawing.Point(41, 124);
-			this.lblAgrupamiento.Name = "lblAgrupamiento";
-			this.lblAgrupamiento.Size = new System.Drawing.Size(110, 15);
-			this.lblAgrupamiento.TabIndex = 38;
-			this.lblAgrupamiento.Text = "Tipo Agrupamiento";
+			this.cCantTotal.Width = 108;
 			// 
 			// FrmConsulta3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(688, 626);
+			this.ClientSize = new System.Drawing.Size(809, 447);
 			this.Controls.Add(this.lblAgrupamiento);
 			this.Controls.Add(this.chkProv);
 			this.Controls.Add(this.chkTipoSum);
@@ -289,6 +295,7 @@ namespace Presentacion.Formularios
 			this.Controls.Add(this.lblFiltroFecha);
 			this.Name = "FrmConsulta3";
 			this.Text = "FrmConsulta3";
+			this.Load += new System.EventHandler(this.FrmConsulta3_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -310,15 +317,15 @@ namespace Presentacion.Formularios
 		private System.Windows.Forms.Label lblFechaDesde;
 		private System.Windows.Forms.ComboBox cboFiltroFecha;
 		private System.Windows.Forms.Label lblFiltroFecha;
-		private System.Windows.Forms.DataGridViewTextBoxColumn cAnio;
-		private System.Windows.Forms.DataGridViewTextBoxColumn cMes;
-		private System.Windows.Forms.DataGridViewTextBoxColumn cProveedor;
-		private System.Windows.Forms.DataGridViewTextBoxColumn cTipoSumin;
-		private System.Windows.Forms.DataGridViewTextBoxColumn cCantTotal;
 		private System.Windows.Forms.CheckBox chkAnio;
 		private System.Windows.Forms.CheckBox chkMes;
 		private System.Windows.Forms.CheckBox chkTipoSum;
 		private System.Windows.Forms.CheckBox chkProv;
 		private System.Windows.Forms.Label lblAgrupamiento;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cAnio;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cMes;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cProveedor;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cTipoSumin;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cCantTotal;
 	}
 }
