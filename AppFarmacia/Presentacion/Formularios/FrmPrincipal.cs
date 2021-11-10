@@ -108,15 +108,20 @@ namespace Presentacion
         {
             ShowSubMenu(panelBotoneraConsultas);
         }
-        //private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //	new FrmConsultar(Accion.Factura).ShowDialog();
-        //}
 
-        //      private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
-        //      {
-        //	new FrmConsultar(Accion.Pedido).ShowDialog();
-        //}
+		private void button3_Click(object sender, EventArgs e)
+		{
+            OpenChildForm(new FrmConsulta3(), sender);
+        }
+		//private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+		//{
+		//	new FrmConsultar(Accion.Factura).ShowDialog();
+		//}
 
-    }
+		//      private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+		//      {
+		//	new FrmConsultar(Accion.Pedido).ShowDialog();
+		//}
+
+	}
 }

@@ -13,13 +13,13 @@ namespace AccesoDatos
 	{
 		public static HelperDao instancia;
 		public string ConnectionString { get; set; }
-		public SqlConnection cnn { get; }
-		public SqlCommand cmd { get; set; }
+		//public SqlConnection cnn { get; }
+		//public SqlCommand cmd { get; set; }
 		private HelperDao()
 		{
-			//ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
-			ConnectionString = @"Data Source=LAPTOP-JULI\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
-			cnn = new SqlConnection(ConnectionString);
+			ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
+			//ConnectionString = @"Data Source=LAPTOP-JULI\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
+			//cnn = new SqlConnection(ConnectionString);
 		}
 		public static HelperDao ObtenerInstancia()
 		{
@@ -33,10 +33,11 @@ namespace AccesoDatos
 		public DataTable ConsultaSQLParametros(string nombreSp, List<Parametro> parametros)
 		{
 			DataTable tabla = new DataTable();
+			SqlConnection cnn = new SqlConnection(ConnectionString);
 			try
-			{
+			{		
 				cnn.Open();
-				cmd = new SqlCommand(nombreSp, cnn);
+				SqlCommand cmd = new SqlCommand(nombreSp, cnn);
 				cmd.Parameters.Clear();
 				cmd.CommandType = CommandType.StoredProcedure;
 
