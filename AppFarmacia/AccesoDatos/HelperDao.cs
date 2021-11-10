@@ -17,7 +17,8 @@ namespace AccesoDatos
 		public SqlCommand cmd { get; set; }
 		private HelperDao()
 		{
-			ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
+			//ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
+			ConnectionString = @"Data Source=LAPTOP-JULI\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
 			cnn = new SqlConnection(ConnectionString);
 		}
 		public static HelperDao ObtenerInstancia()
