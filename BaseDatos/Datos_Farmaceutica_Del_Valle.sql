@@ -1,9 +1,9 @@
 USE db_Farmacia
--- Datos Insertados - BD FarmacÈutica
+-- Datos Insertados - BD Farmac√©utica
 set dateformat dmy
 --Provincias
 
-Insert into Provincias (nom_provincia) values ('CÛrdoba')
+Insert into Provincias (nom_provincia) values ('C√≥rdoba')
 Insert into Provincias (nom_provincia) values ('San Luis')
 Insert into Provincias (nom_provincia) values ('Santa Fe')
 Insert into Provincias (nom_provincia) values ('Buenos Aires')
@@ -13,7 +13,7 @@ Insert into Provincias (nom_provincia) values ('Buenos Aires')
 
 --Localidades
 
-Insert into Localidades (id_provincia, nom_localidad) values (1,'CÛrdoba Capital')
+Insert into Localidades (id_provincia, nom_localidad) values (1,'C√≥rdoba Capital')
 Insert into Localidades (id_provincia, nom_localidad) values (1, 'Villa Allende')
 Insert into Localidades (id_provincia, nom_localidad) values (1, 'Alta Gracia')
 Insert into Localidades (id_provincia, nom_localidad) values (1, 'Mendiolaza')
@@ -31,7 +31,7 @@ Insert into Localidades (id_provincia, nom_localidad) values (3, 'Sunchales')
 Insert into Localidades (id_provincia, nom_localidad) values (4,'CABA')
 Insert into Localidades (id_provincia, nom_localidad) values (4, 'La Plata')
 Insert into Localidades (id_provincia, nom_localidad) values (4, 'Avellaneda')
-Insert into Localidades (id_provincia, nom_localidad) values (4, 'MorÛn')
+Insert into Localidades (id_provincia, nom_localidad) values (4, 'Mor√≥n')
 
 --Select *
 --From Localidades
@@ -40,16 +40,16 @@ Insert into Localidades (id_provincia, nom_localidad) values (4, 'MorÛn')
 
 Insert into Barrios (id_localidad, nom_barrio) values (1, 'Centro')
 Insert into Barrios (id_localidad, nom_barrio) values (1, 'Alberdi')
-Insert into Barrios (id_localidad, nom_barrio) values (1, 'Nueva CÛrdoba')
+Insert into Barrios (id_localidad, nom_barrio) values (1, 'Nueva C√≥rdoba')
 Insert into Barrios (id_localidad, nom_barrio) values (1, 'Cerro de las Rosas')
 Insert into Barrios (id_localidad, nom_barrio) values (2, 'San Isidro')
-Insert into Barrios (id_localidad, nom_barrio) values (2, 'San MartÌn')
+Insert into Barrios (id_localidad, nom_barrio) values (2, 'San Mart√≠n')
 Insert into Barrios (id_localidad, nom_barrio) values (3, 'Parque del Virrey')
 Insert into Barrios (id_localidad, nom_barrio) values (3, 'Portales del Sol')
 Insert into Barrios (id_localidad, nom_barrio) values (4, 'El Talar')
 
-Insert into Barrios (id_localidad, nom_barrio) values (5, 'UniÛn')
-Insert into Barrios (id_localidad, nom_barrio) values (6, 'JardÌn del Sur')
+Insert into Barrios (id_localidad, nom_barrio) values (5, 'Uni√≥n')
+Insert into Barrios (id_localidad, nom_barrio) values (6, 'Jard√≠n del Sur')
 Insert into Barrios (id_localidad, nom_barrio) values (7, 'Barranca Colorada')
 Insert into Barrios (id_localidad, nom_barrio) values (8, 'La Candelaria')
 
@@ -59,12 +59,12 @@ Insert into Barrios (id_localidad, nom_barrio) values (10, 'Parque')
 Insert into Barrios (id_localidad, nom_barrio) values (10, 'Abasto')
 Insert into Barrios (id_localidad, nom_barrio) values (11, '2 de Abril')
 Insert into Barrios (id_localidad, nom_barrio) values (11, 'Barranquitas')
-Insert into Barrios (id_localidad, nom_barrio) values (12, 'ColÛn')
+Insert into Barrios (id_localidad, nom_barrio) values (12, 'Col√≥n')
 
 Insert into Barrios (id_localidad, nom_barrio) values (13, 'Almagro')
 Insert into Barrios (id_localidad, nom_barrio) values (13, 'Parque Avellaneda')
 Insert into Barrios (id_localidad, nom_barrio) values (14, 'Carmen Oeste')
-Insert into Barrios (id_localidad, nom_barrio) values (15, 'SarandÌ')
+Insert into Barrios (id_localidad, nom_barrio) values (15, 'Sarand√≠')
 Insert into Barrios (id_localidad, nom_barrio) values (16, 'Santa Laura')
 
 --Select *
@@ -73,7 +73,7 @@ Insert into Barrios (id_localidad, nom_barrio) values (16, 'Santa Laura')
 --Sucursales
 
 Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmaceutica del Valle - Centro', 'Rosario de Santa Fe', 105, 1)
-Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmaceutica del Valle - Nueva CÛrdoba', 'Crisol', 1236, 3)
+Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmaceutica del Valle - Nueva C√≥rdoba', 'Crisol', 1236, 3)
 Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmaceutica del Valle - Cerro de las Rosas', 'Luis de Tejeda', 1546, 4)
 Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmaceutica del Valle - Barranca Colorada', 'San Luis', 2124, 12)
 Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmaceutica del Valle - Carmen Oeste', 'Esquiu', 105, 23)
@@ -87,7 +87,7 @@ Insert into Sucursales (nom_sucursal, calle, altura, id_barrio) values ('Farmace
 
 Insert into Medicos (nom_medico, ape_medico, matricula) values ('Mario', 'Villalba', '114.223 MP')
 Insert into Medicos (nom_medico, ape_medico, matricula) values ('Edgardo', 'Castillo', '113.563 MP')
-Insert into Medicos (nom_medico, ape_medico, matricula) values ('MarÌa Guillermina', 'LÛpez', '114.540 M.P')
+Insert into Medicos (nom_medico, ape_medico, matricula) values ('Mar√≠a Guillermina', 'L√≥pez', '114.540 M.P')
 Insert into Medicos (nom_medico, ape_medico, matricula) values ('Silvina', 'Torres', '113.873 M.P')
 Insert into Medicos (nom_medico, ape_medico, matricula) values ('Felipe', 'Barrionuevo', '110.892 M.E')
 Insert into Medicos (nom_medico, ape_medico, matricula) values ('Victoria', 'Pelanda', '116.007 M.E')
@@ -118,9 +118,9 @@ Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Ezequiel',
 Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Mario', 'Castillo')
 Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Agustin', 'Lopez')
 Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Fabiola', 'Moreyra')
-Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('FÈlix', '¡vila')
+Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('F√©lix', '√Åvila')
 Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Mariana', 'Barrera')
-Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('NÈstor', 'Pereyra')
+Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('N√©stor', 'Pereyra')
 Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Gabriel', 'Torres')
 Insert into Empleados_Proveedor (nom_empleado, ape_empleado) values ('Julia', 'Paez')
 
@@ -148,9 +148,9 @@ Insert into Descuentos(cant_desc) values (100)
 
 Insert into Tipos_Suministros (tipo_suministro) values ('Cuidado Bucal')
 Insert into Tipos_Suministros (tipo_suministro) values ('Maquillaje')
-Insert into Tipos_Suministros (tipo_suministro) values ('DermocosmÈtica')
+Insert into Tipos_Suministros (tipo_suministro) values ('Dermocosm√©tica')
 Insert into Tipos_Suministros (tipo_suministro) values ('Medicamentos')
-Insert into Tipos_Suministros (tipo_suministro) values ('Complejos VitamÌnicos')
+Insert into Tipos_Suministros (tipo_suministro) values ('Complejos Vitam√≠nicos')
 
 --Select *
 --From Tipos_Suministros
@@ -183,16 +183,16 @@ Insert into Suministros (codigo_barras, nom_suministros, id_tipo_sum, stock, pre
 
 
 --Proveedores
---CÛrdoba
+--C√≥rdoba
 
-Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Diaz Insumos', 'Diaz Distribuidora Insumos S.A', '29-30721184-0', 'Avenida ColÛn', 1080, 1)
-Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Gutierrez e Hijos Descartables S.A', 'Gutierrez e Hijos Descartables S.A', '29-31227994-0', 'Maip˙', 934, 1)
+Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Diaz Insumos', 'Diaz Distribuidora Insumos S.A', '29-30721184-0', 'Avenida Col√≥n', 1080, 1)
+Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Gutierrez e Hijos Descartables S.A', 'Gutierrez e Hijos Descartables S.A', '29-31227994-0', 'Maip√∫', 934, 1)
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Laboratorio Alberdi', 'Alberdi Lab S.R.L', '28-33548773-1', '9 de julio', 1260, 2)
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Farmacia Mayorista del Sol', 'Farmacia May del Sol S.R.L', '29-12544662-0', 'Obispo Trejo', 1430, 3)
-Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Laboratorio Norte S.R.L', 'Farmacia Norte SRL', '29-11548529-0', 'Avenida Rafael NuÒez', 3106, 4)
+Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Laboratorio Norte S.R.L', 'Farmacia Norte SRL', '29-11548529-0', 'Avenida Rafael Nu√±ez', 3106, 4)
 
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Laboratorio Villa Allende', 'Lab Villa Allende S.A', '28-12339845-0','Padre Luchesse KM', 2, 5)
-Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Gutierrez e Hijos Descartables', 'Descartables Gutierrez S.A', '29-08337773-0',  'Maip˙', 934, 6)
+Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Gutierrez e Hijos Descartables', 'Descartables Gutierrez S.A', '29-08337773-0',  'Maip√∫', 934, 6)
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Farmaceutica del Progreso', 'Farmaceutica del Progreso S.R.L', '28-17825650-0',  '9 de julio', 782, 1)
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Distribuidora Pop', 'Distribuidora Pop S.A.C,', '29-205729541-0', 'Principal', 10, 8)
 
@@ -201,10 +201,10 @@ Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_ba
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Laboratorio Del Aguila', 'Del Aguila - Laboratorio S.A', '28-05742747-1', 'Edison', 2, 11)
 
 --Santa Fe
-Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Casa MÈdica Distrubuidora', 'Casa MÈdica Distrubuidora S.A.C', '29-24528616-1', '25 de Mayo', 3313, 15)
+Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Casa M√©dica Distrubuidora', 'Casa M√©dica Distrubuidora S.A.C', '29-24528616-1', '25 de Mayo', 3313, 15)
 
 --Buenos Aires
-Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Bacimed Insumos MÈdicos', 'Bacimed S.A', '28-04586009-1', 'Bahia Blanca', 2765, 21)
+Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('Bacimed Insumos M√©dicos', 'Bacimed S.A', '28-04586009-1', 'Bahia Blanca', 2765, 21)
 Insert into Proveedores (nom_proveedor, razon_social, cuit, calle, altura, id_barrio) values ('C&G Medicinal', 'C&G Medicinal S.R.L', '28-14243604-1', 'Calle 61', 9, 23)
 
 
@@ -256,10 +256,10 @@ Insert into Obras_Sociales (nom_obra_social) values ('Swiss Medical')
 Insert into Obras_Sociales (nom_obra_social) values ('Daspu')
 Insert into Obras_Sociales (nom_obra_social) values ('Sancor Salud')
 Insert into Obras_Sociales (nom_obra_social) values ('Galeno')
-Insert into Obras_Sociales (nom_obra_social) values ('MedifÈ')
+Insert into Obras_Sociales (nom_obra_social) values ('Medif√©')
 Insert into Obras_Sociales (nom_obra_social) values ('Federada Salud')
 Insert into Obras_Sociales (nom_obra_social) values ('Omint')
-Insert into Obras_Sociales (nom_obra_social) values ('PrevenciÛn Salud')
+Insert into Obras_Sociales (nom_obra_social) values ('Prevenci√≥n Salud')
 Insert into Obras_Sociales (nom_obra_social) values ('Aca Salud')
 
 --Select *
@@ -310,6 +310,12 @@ values (6, 1, '478.99', 5, 3, 11, 2, 6)
 
 --Select *
 --From Detalles_Facturas
+
+update Autorizaciones
+set id_obra_social=3
+where id_autorizacion=2
+
+
 
 
 
