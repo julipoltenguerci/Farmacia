@@ -410,3 +410,19 @@ WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_e
 	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
 	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
 GROUP BY nom_proveedor,ts.tipo_suministro
+---------------------
+go
+Create PROCEDURE PA_CONSULTA_SUCURSAL
+@anio int=null,
+@sucursal varchar(50)=null
+AS  
+       SELECT year(f.fecha_factura), s.nom_sucursal AS Sucursal,  
+		   SUM(df.precio_unitario*df.cant_suministro)/COUNT(distinct df.id_factura) AS 'Promedio de Facturación',
+		   SUM(df.precio_unitario*df.cant_suministro) AS Total
+       FROM Facturas f JOIN Detalles_facturas df ON f.id_factura=df.id_factura
+				JOIN Sucursales s ON s.id_sucursal=f.id_sucursal
+				JOIN Clientes c ON f.id_cliente=c.id_cliente
+       WHERE ((@anio=null) or (year(f.fecha_factura)=@anio))
+		     and (@sucursal is null OR (s.nom_sucursal like '%' + @sucursal + '%'))
+       GROUP BY s.id_sucursal, s.nom_sucursal, year(f.fecha_factura)
+	   order by 1 asc

@@ -100,10 +100,7 @@ namespace Presentacion
             OpenChildForm(new FrmConsulta3(), sender);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
         private void btnConocenos_Click_1(object sender, EventArgs e)
@@ -111,5 +108,9 @@ namespace Presentacion
             OpenChildForm(new FrmConocenos(), sender);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmConsulta4(), sender);
+        }
     }
 }
