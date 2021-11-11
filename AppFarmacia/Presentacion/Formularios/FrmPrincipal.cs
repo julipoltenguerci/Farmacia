@@ -101,10 +101,7 @@ namespace Presentacion
             HideSubMenu();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
         private void button2_Click(object sender, EventArgs e)
@@ -128,6 +125,11 @@ namespace Presentacion
             OpenChildForm(new FrmConocenos(), sender);
         }
 
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmConsulta4(), sender);
+        }
 
     }
 }
