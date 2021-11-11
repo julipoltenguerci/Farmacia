@@ -19,6 +19,6 @@ namespace Servicios.Interfaces
 		public DataTable GetFacturasAfiliados(List<Parametro> parametros);
 		public DataTable GetFacturasTipo(List<Parametro> parametros);
 		public DataTable GetCombo(string tabla);
-       
+        public DataTable CargarSucursal(List<Parametro> filtros);
     }
 }

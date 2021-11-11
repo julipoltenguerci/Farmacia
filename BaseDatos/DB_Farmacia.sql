@@ -1,4 +1,5 @@
-
+create database Farmaceutica
+go
 use Farmaceutica
 go
 create table Provincias

@@ -29,16 +29,12 @@ namespace Presentacion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta4));
             this.lblSucursal = new System.Windows.Forms.Label();
             this.lblAño = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAnio = new System.Windows.Forms.TextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
-            this.txtConsulta = new System.Windows.Forms.TextBox();
-            this.lblMostrar = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.cAnio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,12 +63,12 @@ namespace Presentacion.Formularios
             this.lblAño.TabIndex = 51;
             this.lblAño.Text = "Año:";
             // 
-            // textBox1
+            // txtAnio
             // 
-            this.textBox1.Location = new System.Drawing.Point(467, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 50;
+            this.txtAnio.Location = new System.Drawing.Point(467, 45);
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(100, 23);
+            this.txtAnio.TabIndex = 50;
             // 
             // btnConsultar
             // 
@@ -101,37 +97,6 @@ namespace Presentacion.Formularios
             this.lblFiltro.TabIndex = 47;
             this.lblFiltro.Text = "Filtro";
             // 
-            // txtConsulta
-            // 
-            this.txtConsulta.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtConsulta.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtConsulta.Location = new System.Drawing.Point(25, 282);
-            this.txtConsulta.Multiline = true;
-            this.txtConsulta.Name = "txtConsulta";
-            this.txtConsulta.Size = new System.Drawing.Size(641, 162);
-            this.txtConsulta.TabIndex = 46;
-            this.txtConsulta.Text = resources.GetString("txtConsulta.Text");
-            this.txtConsulta.Visible = false;
-            // 
-            // lblMostrar
-            // 
-            this.lblMostrar.AutoSize = true;
-            this.lblMostrar.Location = new System.Drawing.Point(25, 262);
-            this.lblMostrar.Name = "lblMostrar";
-            this.lblMostrar.Size = new System.Drawing.Size(107, 15);
-            this.lblMostrar.TabIndex = 45;
-            this.lblMostrar.Text = "Mostrar Consulta 4";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(138, 262);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 44;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // dgvConsulta
             // 
             this.dgvConsulta.AllowUserToAddRows = false;
@@ -149,7 +114,7 @@ namespace Presentacion.Formularios
             this.dgvConsulta.ReadOnly = true;
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.RowTemplate.Height = 25;
-            this.dgvConsulta.Size = new System.Drawing.Size(641, 166);
+            this.dgvConsulta.Size = new System.Drawing.Size(641, 295);
             this.dgvConsulta.TabIndex = 43;
             // 
             // cAnio
@@ -191,15 +156,13 @@ namespace Presentacion.Formularios
             this.ClientSize = new System.Drawing.Size(809, 447);
             this.Controls.Add(this.lblSucursal);
             this.Controls.Add(this.lblAño);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAnio);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lblFiltro);
-            this.Controls.Add(this.txtConsulta);
-            this.Controls.Add(this.lblMostrar);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dgvConsulta);
             this.Name = "FrmConsulta4";
+            this.Load += new System.EventHandler(this.FrmConsulta4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,13 +173,10 @@ namespace Presentacion.Formularios
 
         private System.Windows.Forms.Label lblSucursal;
         private System.Windows.Forms.Label lblAño;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAnio;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label lblFiltro;
-        private System.Windows.Forms.TextBox txtConsulta;
-        private System.Windows.Forms.Label lblMostrar;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.DataGridViewTextBoxColumn cAnio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cSucursal;

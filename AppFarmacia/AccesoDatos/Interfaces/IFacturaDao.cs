@@ -15,6 +15,6 @@ namespace AccesoDatos.Interfaces
 		DataTable GetFacturasAfiliados(List<Parametro> parametros);
 		DataTable GetFacturasTipo(List<Parametro> parametros);
 	    DataTable GetCombo(string tabla);
-
-	}
+        DataTable CargarSucursal(List<Parametro> filtros);
+    }
 }

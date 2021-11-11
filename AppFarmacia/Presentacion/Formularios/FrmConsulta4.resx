@@ -57,19 +57,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtConsulta.Text" xml:space="preserve">
-    <value>Cuánto facturó en dinero cada sucursal y su promedio de facturacion en este año
-
-SELECT s.nom_sucursal AS Sucursal, year(f.fecha_factura), 
-              SUM(df.precio_unitario*df.cant_suministro)/COUNT(distinct df.id_factura) AS 'Promedio de Facturación',
-              SUM(df.precio_unitario*df.cant_suministro) AS Total
-FROM Facturas f JOIN Detalles_facturas df ON f.id_factura=df.id_factura
-		  JOIN Sucursales s ON s.id_sucursal=f.id_sucursal
-		  JOIN Clientes c ON f.id_cliente=c.id_cliente
-WHERE year(f.fecha_factura)=year(getdate())
-GROUP BY s.nom_sucursal,year(f.fecha_factura) 
-order by 1 asc</value>
-  </data>
   <metadata name="cAnio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
