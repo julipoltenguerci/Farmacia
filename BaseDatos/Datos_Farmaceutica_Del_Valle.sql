@@ -299,6 +299,8 @@ Insert into Autorizaciones (estado, fecha, id_medico, id_obra_social) values (0,
 Insert into Autorizaciones (estado, fecha, id_medico, id_obra_social) values (0, '22/10/2019', 6, 10)
 Insert into Autorizaciones (estado, fecha, id_medico, id_obra_social) values (0, '27/08/2020', 6, 10)
 
+Insert into Autorizaciones (estado, fecha, id_medico, id_obra_social) values (1, '01/06/2018', 3, 3)
+Insert into Autorizaciones (estado, fecha, id_medico, id_obra_social) values (1, '29/07/2018', 3, 3)
 
 
 --Select *
@@ -321,6 +323,8 @@ Insert into Facturas (id_cliente, id_sucursal, fecha_factura) values (6, 1, '19/
 Insert into Facturas (id_cliente, id_sucursal, fecha_factura) values (6, 1, '21/10/2019')
 Insert into Facturas (id_cliente, id_sucursal, fecha_factura) values (6, 3, '26/08/2020')
 
+Insert into Facturas (id_cliente, id_sucursal, fecha_factura) values (2, 3, '02/03/2021') 
+Insert into Facturas (id_cliente, id_sucursal, fecha_factura) values (2, 3, '06/01/2021')
 --Select *
 --From Facturas
 
@@ -371,6 +375,12 @@ values (14, 1, '218.99', 13, 2, 1, 1, 14)
 Insert into Detalles_Facturas (id_det_factura, cant_suministro, precio_unitario, id_factura, id_suministro, id_descuento, id_tipo_cond_vta, id_autorizacion)
 values (15, 1, '218.99', 14, 1, 1, 1, 15)
 
+
+Insert into Detalles_Facturas (id_det_factura, cant_suministro, precio_unitario, id_factura, id_suministro, id_descuento, id_tipo_cond_vta, id_autorizacion)
+values (16, 1, '478.99', 10, 4, 5, 2, 16)
+
+Insert into Detalles_Facturas (id_det_factura, cant_suministro, precio_unitario, id_factura, id_suministro, id_descuento, id_tipo_cond_vta, id_autorizacion)
+values (17, 1, '478.99', 11, 4, 5, 2, 17)
 --Select *
 --From Detalles_Facturas
 
