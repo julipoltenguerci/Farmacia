@@ -39,6 +39,7 @@ namespace Presentacion
 			this.btnConsulta1 = new System.Windows.Forms.Button();
 			this.btnConsultas = new System.Windows.Forms.Button();
 			this.panelBar = new System.Windows.Forms.Panel();
+			this.lblTipo = new System.Windows.Forms.Label();
 			this.btnMinimize = new System.Windows.Forms.PictureBox();
 			this.btnClose = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -197,6 +198,7 @@ namespace Presentacion
 			// panelBar
 			// 
 			this.panelBar.BackColor = System.Drawing.Color.Gray;
+			this.panelBar.Controls.Add(this.lblTipo);
 			this.panelBar.Controls.Add(this.btnMinimize);
 			this.panelBar.Controls.Add(this.btnClose);
 			this.panelBar.Controls.Add(this.pictureBox1);
@@ -204,6 +206,17 @@ namespace Presentacion
 			this.panelBar.Name = "panelBar";
 			this.panelBar.Size = new System.Drawing.Size(999, 89);
 			this.panelBar.TabIndex = 1;
+			// 
+			// lblTipo
+			// 
+			this.lblTipo.AutoSize = true;
+			this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblTipo.ForeColor = System.Drawing.Color.White;
+			this.lblTipo.Location = new System.Drawing.Point(174, 43);
+			this.lblTipo.Name = "lblTipo";
+			this.lblTipo.Size = new System.Drawing.Size(58, 19);
+			this.lblTipo.TabIndex = 6;
+			this.lblTipo.Text = "label1";
 			// 
 			// btnMinimize
 			// 
@@ -266,9 +279,11 @@ namespace Presentacion
 			this.Name = "FrmPrincipal";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Gestion Farmaceutica";
+			this.Load += new System.EventHandler(this.FrmPrincipal_Load);
 			this.panelMenu.ResumeLayout(false);
 			this.panelBotoneraConsultas.ResumeLayout(false);
 			this.panelBar.ResumeLayout(false);
+			this.panelBar.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -292,6 +307,7 @@ namespace Presentacion
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button btnConocenos;
         private System.Windows.Forms.Button btnCerrarSesion;
-    }
+		private System.Windows.Forms.Label lblTipo;
+	}
 }
 

@@ -419,7 +419,7 @@ create proc PA_FACTURAS_TIPO
 @estado int
 as
 begin
-select f.id_factura 'Nro factura', cant_suministro*df.precio_unitario 'Total factura', IIF(estado = 1, 'Si','No') AS Autorizado,
+select f.id_factura 'Nro factura',cast((cant_suministro*df.precio_unitario) as decimal(16,2)) 'Total factura', IIF(estado = 1, 'Si','No') AS Autorizado,
 format(f.fecha_factura,'dd/MM/yyyy') 'Fecha fac', nom_suministros 'Nombre Suministro',ts.tipo_suministro 'Tipo suministro'
 from facturas f join Detalles_Facturas df on f.id_factura=df.id_factura
 join Suministros s on df.id_suministro=s.id_suministro
@@ -435,8 +435,8 @@ create PROCEDURE PA_CONSULTA_SUCURSAL
 @sucursal varchar(50)=null
 AS  
        SELECT year(f.fecha_factura)as Fecha, s.nom_sucursal AS Sucursal,  
-		   SUM(df.precio_unitario*df.cant_suministro)/COUNT(distinct df.id_factura) AS 'Promedio de Facturación',
-		   SUM(df.precio_unitario*df.cant_suministro) AS Total
+		   cast((SUM(df.precio_unitario*df.cant_suministro)/COUNT(distinct df.id_factura)) as decimal(16,2)) AS 'Promedio de Facturación',
+		   cast((SUM(df.precio_unitario*df.cant_suministro)) as decimal(16,2)) AS Total
        FROM Facturas f JOIN Detalles_facturas df ON f.id_factura=df.id_factura
 				JOIN Sucursales s ON s.id_sucursal=f.id_sucursal
 				JOIN Clientes c ON f.id_cliente=c.id_cliente

@@ -88,6 +88,8 @@ namespace Presentacion
         {
             OpenChildForm(new FrmConsulta1(), sender);
             HideSubMenu();
+            lblTipo.Visible = true;
+            lblTipo.Text = btnConsulta1.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,6 +101,8 @@ namespace Presentacion
         {
             OpenChildForm(new FrmConsulta3(), sender);
             HideSubMenu();
+            lblTipo.Visible = true;
+            lblTipo.Text = button3.Text;
         }
 
         
@@ -107,6 +111,9 @@ namespace Presentacion
         private void button2_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmConsulta2(), sender);
+            HideSubMenu();
+            lblTipo.Visible = true;
+            lblTipo.Text = button2.Text;
         }
         //private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         //{
@@ -123,13 +130,22 @@ namespace Presentacion
         private void btnConocenos_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new FrmConocenos(), sender);
+            HideSubMenu();
+            
         }
 
 
         private void button4_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmConsulta4(), sender);
+            HideSubMenu();
+            lblTipo.Visible = true;
+            lblTipo.Text = button4.Text;
         }
 
-    }
+		private void FrmPrincipal_Load(object sender, EventArgs e)
+		{
+            lblTipo.Visible = false;
+		}
+	}
 }
