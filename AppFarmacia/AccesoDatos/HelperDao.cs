@@ -18,9 +18,9 @@ namespace AccesoDatos
 		private HelperDao()
 		{
 
-			ConnectionString = @"Data Source=DESKTOP-CBSH5U3\SQLEXPRESS; Initial Catalog=Farmaceutica;Integrated Security=True";
+			//ConnectionString = @"Data Source=DESKTOP-CBSH5U3\SQLEXPRESS; Initial Catalog=Farmaceutica;Integrated Security=True";
 
-			//ConnectionString = @"Data Source =DESKTOP-DUIDE87\SQLEXPRESS; Initial Catalog = Farmacia2; Integrated Security = True";
+			ConnectionString = @"Data Source =DESKTOP-DUIDE87\SQLEXPRESS; Initial Catalog = Farmaceutica; Integrated Security = True";
 
 			//ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
 			//ConnectionString = @"Data Source=LAPTOP-JULI\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";

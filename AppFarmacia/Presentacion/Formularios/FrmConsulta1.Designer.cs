@@ -63,6 +63,7 @@ namespace Presentacion.Formularios
             // 
             this.dgvConsulta1.AllowUserToAddRows = false;
             this.dgvConsulta1.AllowUserToDeleteRows = false;
+            this.dgvConsulta1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -78,13 +79,13 @@ namespace Presentacion.Formularios
             this.Obra_Social,
             this.descuento,
             this.fecha_factura});
-            this.dgvConsulta1.Location = new System.Drawing.Point(1, 131);
+            this.dgvConsulta1.Location = new System.Drawing.Point(23, 131);
             this.dgvConsulta1.Name = "dgvConsulta1";
             this.dgvConsulta1.ReadOnly = true;
             this.dgvConsulta1.RowHeadersVisible = false;
             this.dgvConsulta1.RowTemplate.Height = 25;
             this.dgvConsulta1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsulta1.Size = new System.Drawing.Size(808, 256);
+            this.dgvConsulta1.Size = new System.Drawing.Size(774, 263);
             this.dgvConsulta1.TabIndex = 31;
             // 
             // Afiliado
@@ -97,7 +98,6 @@ namespace Presentacion.Formularios
             this.Afiliado.HeaderText = "Afiliado";
             this.Afiliado.Name = "Afiliado";
             this.Afiliado.ReadOnly = true;
-            this.Afiliado.Width = 280;
             // 
             // Obra_Social
             // 
@@ -105,7 +105,6 @@ namespace Presentacion.Formularios
             this.Obra_Social.HeaderText = "Obra Social";
             this.Obra_Social.Name = "Obra_Social";
             this.Obra_Social.ReadOnly = true;
-            this.Obra_Social.Width = 230;
             // 
             // descuento
             // 
@@ -113,7 +112,6 @@ namespace Presentacion.Formularios
             this.descuento.HeaderText = "Descuento";
             this.descuento.Name = "descuento";
             this.descuento.ReadOnly = true;
-            this.descuento.Width = 150;
             // 
             // fecha_factura
             // 
@@ -123,15 +121,14 @@ namespace Presentacion.Formularios
             this.fecha_factura.HeaderText = "Fecha Factura";
             this.fecha_factura.Name = "fecha_factura";
             this.fecha_factura.ReadOnly = true;
-            this.fecha_factura.Width = 150;
             // 
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.DimGray;
             this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(699, 51);
+            this.btnConsultar.Location = new System.Drawing.Point(635, 45);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(80, 41);
             this.btnConsultar.TabIndex = 26;
@@ -143,7 +140,7 @@ namespace Presentacion.Formularios
             // 
             this.lblFiltroDescuento.AutoSize = true;
             this.lblFiltroDescuento.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFiltroDescuento.Location = new System.Drawing.Point(12, 92);
+            this.lblFiltroDescuento.Location = new System.Drawing.Point(23, 82);
             this.lblFiltroDescuento.Name = "lblFiltroDescuento";
             this.lblFiltroDescuento.Size = new System.Drawing.Size(107, 16);
             this.lblFiltroDescuento.TabIndex = 23;
@@ -156,7 +153,7 @@ namespace Presentacion.Formularios
             this.cboFiltroObraSocial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cboFiltroObraSocial.ForeColor = System.Drawing.Color.Black;
             this.cboFiltroObraSocial.FormattingEnabled = true;
-            this.cboFiltroObraSocial.Location = new System.Drawing.Point(105, 31);
+            this.cboFiltroObraSocial.Location = new System.Drawing.Point(142, 29);
             this.cboFiltroObraSocial.Name = "cboFiltroObraSocial";
             this.cboFiltroObraSocial.Size = new System.Drawing.Size(223, 25);
             this.cboFiltroObraSocial.TabIndex = 18;
@@ -165,7 +162,7 @@ namespace Presentacion.Formularios
             // 
             this.lblFiltroFecha.AutoSize = true;
             this.lblFiltroFecha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFiltroFecha.Location = new System.Drawing.Point(14, 34);
+            this.lblFiltroFecha.Location = new System.Drawing.Point(51, 33);
             this.lblFiltroFecha.Name = "lblFiltroFecha";
             this.lblFiltroFecha.Size = new System.Drawing.Size(79, 16);
             this.lblFiltroFecha.TabIndex = 17;
@@ -173,7 +170,7 @@ namespace Presentacion.Formularios
             // 
             // tkbDescuento
             // 
-            this.tkbDescuento.Location = new System.Drawing.Point(128, 83);
+            this.tkbDescuento.Location = new System.Drawing.Point(142, 80);
             this.tkbDescuento.Name = "tkbDescuento";
             this.tkbDescuento.Size = new System.Drawing.Size(223, 45);
             this.tkbDescuento.TabIndex = 34;
@@ -191,7 +188,7 @@ namespace Presentacion.Formularios
             this.dtpFechaHasta.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpFechaHasta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(503, 72);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(465, 76);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(126, 22);
             this.dtpFechaHasta.TabIndex = 40;
@@ -200,7 +197,7 @@ namespace Presentacion.Formularios
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFechaHasta.Location = new System.Drawing.Point(449, 76);
+            this.lblFechaHasta.Location = new System.Drawing.Point(411, 80);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(42, 16);
             this.lblFechaHasta.TabIndex = 39;
@@ -211,7 +208,7 @@ namespace Presentacion.Formularios
             this.dtpFechaDesde.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpFechaDesde.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(503, 30);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(465, 30);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(126, 22);
             this.dtpFechaDesde.TabIndex = 38;
@@ -221,7 +218,7 @@ namespace Presentacion.Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(446, 35);
+            this.label2.Location = new System.Drawing.Point(408, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 37;
@@ -233,7 +230,7 @@ namespace Presentacion.Formularios
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(349, 400);
+            this.btnEliminar.Location = new System.Drawing.Point(635, 399);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 36);
             this.btnEliminar.TabIndex = 41;
@@ -243,8 +240,7 @@ namespace Presentacion.Formularios
             // 
             // FrmConsulta1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(809, 447);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dtpFechaHasta);

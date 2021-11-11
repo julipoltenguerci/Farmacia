@@ -50,6 +50,7 @@ namespace Presentacion.Formularios
             // 
             this.dgvConsultaFactura.AllowUserToAddRows = false;
             this.dgvConsultaFactura.AllowUserToDeleteRows = false;
+            this.dgvConsultaFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultaFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cNroFac,
@@ -58,11 +59,12 @@ namespace Presentacion.Formularios
             this.cFecFac,
             this.cNombSuministro,
             this.cTipoSum});
-            this.dgvConsultaFactura.Location = new System.Drawing.Point(64, 146);
+            this.dgvConsultaFactura.Location = new System.Drawing.Point(12, 156);
             this.dgvConsultaFactura.Name = "dgvConsultaFactura";
             this.dgvConsultaFactura.ReadOnly = true;
+            this.dgvConsultaFactura.RowHeadersVisible = false;
             this.dgvConsultaFactura.RowTemplate.Height = 25;
-            this.dgvConsultaFactura.Size = new System.Drawing.Size(644, 253);
+            this.dgvConsultaFactura.Size = new System.Drawing.Size(785, 270);
             this.dgvConsultaFactura.TabIndex = 0;
             // 
             // cNroFac
@@ -103,70 +105,73 @@ namespace Presentacion.Formularios
             // 
             // btnConsultaFac
             // 
-            this.btnConsultaFac.Location = new System.Drawing.Point(621, 99);
+            this.btnConsultaFac.BackColor = System.Drawing.Color.DimGray;
+            this.btnConsultaFac.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConsultaFac.Location = new System.Drawing.Point(545, 100);
             this.btnConsultaFac.Name = "btnConsultaFac";
-            this.btnConsultaFac.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultaFac.Size = new System.Drawing.Size(80, 41);
             this.btnConsultaFac.TabIndex = 1;
             this.btnConsultaFac.Text = "Consultar";
-            this.btnConsultaFac.UseVisualStyleBackColor = true;
+            this.btnConsultaFac.UseVisualStyleBackColor = false;
             this.btnConsultaFac.Click += new System.EventHandler(this.btnConsultaFac_Click);
             // 
             // dtpFechaHastaf
             // 
             this.dtpFechaHastaf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHastaf.Location = new System.Drawing.Point(494, 39);
+            this.dtpFechaHastaf.Location = new System.Drawing.Point(494, 42);
             this.dtpFechaHastaf.Name = "dtpFechaHastaf";
-            this.dtpFechaHastaf.Size = new System.Drawing.Size(126, 23);
+            this.dtpFechaHastaf.Size = new System.Drawing.Size(126, 22);
             this.dtpFechaHastaf.TabIndex = 26;
             // 
             // lblFechaHastaF
             // 
             this.lblFechaHastaF.AutoSize = true;
-            this.lblFechaHastaF.Location = new System.Drawing.Point(419, 45);
+            this.lblFechaHastaF.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFechaHastaF.Location = new System.Drawing.Point(433, 45);
             this.lblFechaHastaF.Name = "lblFechaHastaF";
-            this.lblFechaHastaF.Size = new System.Drawing.Size(40, 15);
+            this.lblFechaHastaF.Size = new System.Drawing.Size(42, 16);
             this.lblFechaHastaF.TabIndex = 25;
             this.lblFechaHastaF.Text = "Hasta:";
             // 
             // dtpFechaDesdeF
             // 
             this.dtpFechaDesdeF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesdeF.Location = new System.Drawing.Point(190, 39);
+            this.dtpFechaDesdeF.Location = new System.Drawing.Point(190, 42);
             this.dtpFechaDesdeF.Name = "dtpFechaDesdeF";
-            this.dtpFechaDesdeF.Size = new System.Drawing.Size(126, 23);
+            this.dtpFechaDesdeF.Size = new System.Drawing.Size(126, 22);
             this.dtpFechaDesdeF.TabIndex = 24;
             // 
             // lblFechaDesdeF
             // 
             this.lblFechaDesdeF.AutoSize = true;
-            this.lblFechaDesdeF.Location = new System.Drawing.Point(116, 45);
+            this.lblFechaDesdeF.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFechaDesdeF.Location = new System.Drawing.Point(126, 45);
             this.lblFechaDesdeF.Name = "lblFechaDesdeF";
-            this.lblFechaDesdeF.Size = new System.Drawing.Size(42, 15);
+            this.lblFechaDesdeF.Size = new System.Drawing.Size(47, 16);
             this.lblFechaDesdeF.TabIndex = 23;
             this.lblFechaDesdeF.Text = "Desde:";
             // 
             // cboTipoSuministros
             // 
             this.cboTipoSuministros.FormattingEnabled = true;
-            this.cboTipoSuministros.Location = new System.Drawing.Point(190, 99);
+            this.cboTipoSuministros.Location = new System.Drawing.Point(190, 110);
             this.cboTipoSuministros.Name = "cboTipoSuministros";
-            this.cboTipoSuministros.Size = new System.Drawing.Size(163, 23);
+            this.cboTipoSuministros.Size = new System.Drawing.Size(132, 24);
             this.cboTipoSuministros.TabIndex = 27;
             // 
             // chkBoxAutorizados
             // 
             this.chkBoxAutorizados.AutoSize = true;
-            this.chkBoxAutorizados.Location = new System.Drawing.Point(419, 102);
+            this.chkBoxAutorizados.Location = new System.Drawing.Point(419, 112);
             this.chkBoxAutorizados.Name = "chkBoxAutorizados";
-            this.chkBoxAutorizados.Size = new System.Drawing.Size(89, 19);
+            this.chkBoxAutorizados.Size = new System.Drawing.Size(95, 20);
             this.chkBoxAutorizados.TabIndex = 28;
             this.chkBoxAutorizados.Text = "Autorizados";
             this.chkBoxAutorizados.UseVisualStyleBackColor = true;
             // 
             // FrmConsulta2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(809, 447);
             this.Controls.Add(this.chkBoxAutorizados);
             this.Controls.Add(this.cboTipoSuministros);
@@ -176,6 +181,7 @@ namespace Presentacion.Formularios
             this.Controls.Add(this.lblFechaDesdeF);
             this.Controls.Add(this.btnConsultaFac);
             this.Controls.Add(this.dgvConsultaFactura);
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Name = "FrmConsulta2";
             this.Text = "FrmConsulta2";
             this.Load += new System.EventHandler(this.FrmConsulta2_Load);
@@ -188,12 +194,6 @@ namespace Presentacion.Formularios
         #endregion
 
         private System.Windows.Forms.DataGridView dgvConsultaFactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cNroFac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cAutorizado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cFecFac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cNombSuministro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cTipoSum;
         private System.Windows.Forms.Button btnConsultaFac;
         private System.Windows.Forms.DateTimePicker dtpFechaHastaf;
         private System.Windows.Forms.Label lblFechaHastaF;
@@ -201,5 +201,11 @@ namespace Presentacion.Formularios
         private System.Windows.Forms.Label lblFechaDesdeF;
         private System.Windows.Forms.ComboBox cboTipoSuministros;
         private System.Windows.Forms.CheckBox chkBoxAutorizados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cNroFac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cAutorizado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cFecFac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cNombSuministro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTipoSum;
     }
 }

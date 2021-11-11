@@ -33,7 +33,6 @@ namespace Presentacion
             this.btnConocenos = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelBotoneraConsultas = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -79,9 +78,7 @@ namespace Presentacion
             this.btnConocenos.TabIndex = 3;
             this.btnConocenos.Text = "   Conocenos";
             this.btnConocenos.UseVisualStyleBackColor = false;
-
             this.btnConocenos.Click += new System.EventHandler(this.btnConocenos_Click_1);
-
             // 
             // btnCerrarSesion
             // 
@@ -102,7 +99,6 @@ namespace Presentacion
             // panelBotoneraConsultas
             // 
             this.panelBotoneraConsultas.BackColor = System.Drawing.Color.Gray;
-            this.panelBotoneraConsultas.Controls.Add(this.button5);
             this.panelBotoneraConsultas.Controls.Add(this.button4);
             this.panelBotoneraConsultas.Controls.Add(this.button3);
             this.panelBotoneraConsultas.Controls.Add(this.button2);
@@ -113,85 +109,63 @@ namespace Presentacion
             this.panelBotoneraConsultas.Size = new System.Drawing.Size(176, 204);
             this.panelBotoneraConsultas.TabIndex = 1;
             // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(0, 160);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(176, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Consulta 5";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(0, 120);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(176, 40);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Consulta 4";
+            this.button4.Text = "Sucursales";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-
-
-      this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.button3.Location = new System.Drawing.Point(0, 80);
-			this.button3.Name = "button3";
-			this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.button3.Size = new System.Drawing.Size(176, 40);
-			this.button3.TabIndex = 3;
-			this.button3.Text = "Cant Tipo Suministro";
-			this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button3.UseVisualStyleBackColor = false;
-			this.button3.Click += new System.EventHandler(this.button3_Click);
-
-
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(0, 80);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(176, 40);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Cant Tipo Suministro";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(0, 40);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(176, 40);
             this.button2.TabIndex = 2;
-
             this.button2.Text = "Facturas";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-
             // 
             // btnConsulta1
             // 
             this.btnConsulta1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsulta1.FlatAppearance.BorderSize = 0;
             this.btnConsulta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsulta1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnConsulta1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConsulta1.Location = new System.Drawing.Point(0, 0);
             this.btnConsulta1.Name = "btnConsulta1";
@@ -208,7 +182,7 @@ namespace Presentacion
             this.btnConsultas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultas.FlatAppearance.BorderSize = 0;
             this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsultas.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnConsultas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConsultas.Image = global::Presentacion.Properties.Resources.ico_consultas;
             this.btnConsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +204,6 @@ namespace Presentacion
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(999, 89);
             this.panelBar.TabIndex = 1;
-
             // 
             // btnMinimize
             // 
@@ -312,7 +285,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Panel panelChild;
         private System.Windows.Forms.Panel panelBotoneraConsultas;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

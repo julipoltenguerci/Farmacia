@@ -25,7 +25,10 @@ namespace Presentacion.Formularios
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            CargarSucursal();
+            
+                CargarSucursal();
+            
+            
         }
 
         

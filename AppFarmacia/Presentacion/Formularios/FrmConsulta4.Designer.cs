@@ -46,54 +46,59 @@ namespace Presentacion.Formularios
             // lblSucursal
             // 
             this.lblSucursal.AutoSize = true;
-            this.lblSucursal.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSucursal.Location = new System.Drawing.Point(25, 46);
+            this.lblSucursal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSucursal.Location = new System.Drawing.Point(84, 51);
             this.lblSucursal.Name = "lblSucursal";
-            this.lblSucursal.Size = new System.Drawing.Size(100, 22);
+            this.lblSucursal.Size = new System.Drawing.Size(60, 17);
             this.lblSucursal.TabIndex = 52;
             this.lblSucursal.Text = "Sucursal:";
             // 
             // lblAño
             // 
             this.lblAño.AutoSize = true;
-            this.lblAño.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAño.Location = new System.Drawing.Point(412, 45);
+            this.lblAño.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAño.Location = new System.Drawing.Point(471, 51);
             this.lblAño.Name = "lblAño";
-            this.lblAño.Size = new System.Drawing.Size(54, 22);
+            this.lblAño.Size = new System.Drawing.Size(35, 17);
             this.lblAño.TabIndex = 51;
             this.lblAño.Text = "Año:";
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(467, 45);
+            this.txtAnio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAnio.Location = new System.Drawing.Point(526, 48);
             this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(100, 23);
+            this.txtAnio.Size = new System.Drawing.Size(100, 22);
             this.txtAnio.TabIndex = 50;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(591, 46);
+            this.btnConsultar.BackColor = System.Drawing.Color.DimGray;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConsultar.Location = new System.Drawing.Point(649, 39);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(80, 41);
             this.btnConsultar.TabIndex = 49;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(125, 46);
+            this.txtFiltro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFiltro.Location = new System.Drawing.Point(184, 48);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(261, 23);
+            this.txtFiltro.Size = new System.Drawing.Size(261, 22);
             this.txtFiltro.TabIndex = 48;
             // 
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFiltro.Location = new System.Drawing.Point(25, 9);
+            this.lblFiltro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFiltro.Location = new System.Drawing.Point(84, 14);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(46, 20);
+            this.lblFiltro.Size = new System.Drawing.Size(37, 17);
             this.lblFiltro.TabIndex = 47;
             this.lblFiltro.Text = "Filtro";
             // 
@@ -109,12 +114,12 @@ namespace Presentacion.Formularios
             this.cSucursal,
             this.cPromedioFactura,
             this.cTotal});
-            this.dgvConsulta.Location = new System.Drawing.Point(25, 90);
+            this.dgvConsulta.Location = new System.Drawing.Point(12, 93);
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.ReadOnly = true;
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.RowTemplate.Height = 25;
-            this.dgvConsulta.Size = new System.Drawing.Size(641, 295);
+            this.dgvConsulta.Size = new System.Drawing.Size(785, 342);
             this.dgvConsulta.TabIndex = 43;
             // 
             // cAnio
@@ -151,8 +156,7 @@ namespace Presentacion.Formularios
             // 
             // FrmConsulta4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(809, 447);
             this.Controls.Add(this.lblSucursal);
             this.Controls.Add(this.lblAño);
