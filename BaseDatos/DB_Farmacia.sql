@@ -300,10 +300,11 @@ go
 CREATE PROCEDURE PA_COMPRAS_AFILIADOS
 
 @idObraSocial int =null,
-@fechaFactura datetime,
+@fechaDesde datetime,
+@fechaHasta datetime,
 @descuento int
 AS
-select nom_cliente+ ' '+ ape_cliente as Afiliado, nom_obra_social as 'Obra_Social', cant_desc as descuento
+select nom_cliente+ ' '+ ape_cliente as Afiliado, nom_obra_social as 'Obra_Social', cant_desc as descuento, f.fecha_factura
 from Clientes c join facturas f on c.id_cliente=f.id_cliente
 join Detalles_Facturas df on f.id_factura=df.id_factura
 join Descuentos d on d.id_descuento=df.id_descuento
@@ -311,7 +312,7 @@ join Autorizaciones a on df.id_autorizacion=a.id_autorizacion
 join Obras_Sociales os on a.id_obra_social=os.id_obra_social
 where a.id_obra_social = @idObraSocial
 and a.estado = 1
-and year(fecha_factura)=year(@fechaFactura)
-and cant_desc >= @descuento
+and (year(fecha_factura)>=year(@fechaDesde) and year(fecha_factura)<=year(@fechaHasta))
+and cant_desc <= @descuento
 
 go
