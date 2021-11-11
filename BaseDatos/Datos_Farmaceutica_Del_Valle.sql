@@ -1,4 +1,4 @@
-USE db_Farmacia
+USE Farmaceutica
 -- Datos Insertados - BD Farmacéutica
 set dateformat dmy
 --Provincias
@@ -229,8 +229,8 @@ Insert into Pedidos (fecha_pedido, fecha_entrega, id_empleado, id_sucursal, id_e
 Insert into Pedidos (fecha_pedido, fecha_entrega, id_empleado, id_sucursal, id_empleado_prov, id_proveedor) values ('04/10/2021', '20/10/2021', 4, 4, 5, 13)
 Insert into Pedidos (fecha_pedido, fecha_entrega, id_empleado, id_sucursal, id_empleado_prov, id_proveedor) values ('04/11/2021', '10/11/2021', 3, 6, 2, 9)
 
---Select *
---From Pedidos
+Select *
+From Pedidos
 
 
 --Detalles Pedidos
@@ -241,15 +241,15 @@ Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico
 Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (4, 4, 3, 4, 2, '957,98')
 Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (5, 5, 3, 1, 2, '957,98')
 --reg nuevos
-Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (6, 12, 8, 2, 5, '244,95')
-Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (7, 13, 5, 2, 3, '2504,00')
-Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (8, 13, 6, 2, 4, '194,33')
-Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (9, 14, 7, 2, 8, '594,40')
-Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (10, 15, 9, 2, 10, '494,66')
-Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (11, 16, 3, 2, 11, '204,67')
+Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (7, 12, 8, 2, 5, '244,95')
+Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (8, 9, 5, 2, 3, '2504,00')
+Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (9, 10, 6, 2, 4, '194,33')
+Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (10, 11, 7, 2, 8, '594,40')
+Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (11, 11, 9, 2, 10, '494,66')
+Insert into Detalles_Pedidos (id_det_pedido, id_pedido, id_suministro, id_medico, cantidad, precio_compra) values (12, 12, 3, 2, 11, '204,67')
 
---Select *
---From Detalles_Pedidos
+Select *
+From Detalles_Pedidos
 
 --Clientes
 
