@@ -12,7 +12,24 @@ using System.Threading.Tasks;
 namespace AccesoDatos.Implementaciones
 {
 	class FacturaDao : IFacturaDao
-	{   
+	{
+        public DataTable CargarSucursal(List<Parametro> filtros)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CONSULTA_SUCURSAL", filtros);
+
+                return tabla;
+            }
+            catch (SqlException)
+            {
+                tabla = null;
+            }
+            return tabla;
+
+        }
         public List<Factura> GetByFilters(List<Parametro> parametros)
         {
             
@@ -89,33 +106,7 @@ namespace AccesoDatos.Implementaciones
             }
             return tabla;
         }
-        public List<Factura> ConsultaFacturasPorAño(List<Parametro> parametros)
-        {
-            List<Factura> lst = new List<Factura>();
-            try
-            {
-                DataTable tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CONSULTA_SUCURSAL", parametros);
-                foreach (DataRow row in tabla.Rows)
-                {
-                    Factura oFactura = new Factura();
-                    oFactura.Fecha = Convert.ToDateTime(row["fecha"].ToString());
-                    oFactura.Total = Convert.ToDouble(row["total"].ToString());
-
-                    Sucursal oSucursal = new Sucursal();
-                    oSucursal.NombreSuc= row["Sucursal"].ToString();
-
-
-                }
-
-
-            }
-            catch (SqlException)
-            {
-                lst = null;
-            }
-
-            return lst;
-        }
+        
 
         public DataTable GetCombo(string tabla)
         {

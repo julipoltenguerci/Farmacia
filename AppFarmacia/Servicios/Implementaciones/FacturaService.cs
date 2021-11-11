@@ -40,5 +40,10 @@ namespace Servicios.Implementaciones
 		{
 			return dao.GetCombo(tabla);
 		}
-    }
+		public DataTable CargarSucursal(List<Parametro> filtros)
+        {
+			return dao.CargarSucursal(filtros);
+		}
+
+	}
 }
