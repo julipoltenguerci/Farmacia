@@ -65,10 +65,6 @@ namespace Presentacion
             }
 
         }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -83,19 +79,9 @@ namespace Presentacion
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnConocenos_Click(object sender, EventArgs e)
+        private void btnConsultas_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FrmConocenos(), sender);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            ShowSubMenu(panelBotoneraConsultas);
         }
 
         private void btnConsulta1_Click(object sender, EventArgs e)
@@ -104,24 +90,26 @@ namespace Presentacion
             HideSubMenu();
         }
 
-        private void btnConsultas_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(panelBotoneraConsultas);
+
         }
 
-		private void button3_Click(object sender, EventArgs e)
-		{
+        private void button3_Click(object sender, EventArgs e)
+        {
             OpenChildForm(new FrmConsulta3(), sender);
         }
-		//private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-		//{
-		//	new FrmConsultar(Accion.Factura).ShowDialog();
-		//}
 
-		//      private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
-		//      {
-		//	new FrmConsultar(Accion.Pedido).ShowDialog();
-		//}
+        private void button4_Click(object sender, EventArgs e)
+        {
 
-	}
+        }
+
+
+        private void btnConocenos_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmConocenos(), sender);
+        }
+
+    }
 }
