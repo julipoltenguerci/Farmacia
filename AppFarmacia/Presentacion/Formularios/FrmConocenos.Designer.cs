@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion.Formularios
 {
-    partial class Form1
+    partial class FrmConocenos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Presentacion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConocenos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblAvatarRic = new System.Windows.Forms.Label();
@@ -60,13 +60,13 @@ namespace Presentacion.Formularios
             this.panel1.Controls.Add(this.lblAvatarGer);
             this.panel1.Location = new System.Drawing.Point(-1, 274);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 143);
+            this.panel1.Size = new System.Drawing.Size(821, 143);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Presentacion.Properties.Resources.Jere_Avatar;
-            this.pictureBox2.Location = new System.Drawing.Point(612, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(623, 13);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(108, 75);
             this.pictureBox2.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace Presentacion.Formularios
             this.lblAvatarRic.AutoSize = true;
             this.lblAvatarRic.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAvatarRic.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAvatarRic.Location = new System.Drawing.Point(221, 93);
+            this.lblAvatarRic.Location = new System.Drawing.Point(234, 93);
             this.lblAvatarRic.Name = "lblAvatarRic";
             this.lblAvatarRic.Size = new System.Drawing.Size(128, 16);
             this.lblAvatarRic.TabIndex = 9;
@@ -86,7 +86,7 @@ namespace Presentacion.Formularios
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.Juli_Avatar;
-            this.pictureBox1.Location = new System.Drawing.Point(430, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(441, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 75);
             this.pictureBox1.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace Presentacion.Formularios
             this.lblAvatarJere.AutoSize = true;
             this.lblAvatarJere.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAvatarJere.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAvatarJere.Location = new System.Drawing.Point(574, 94);
+            this.lblAvatarJere.Location = new System.Drawing.Point(587, 94);
             this.lblAvatarJere.Name = "lblAvatarJere";
             this.lblAvatarJere.Size = new System.Drawing.Size(143, 16);
             this.lblAvatarJere.TabIndex = 8;
@@ -106,7 +106,7 @@ namespace Presentacion.Formularios
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.Ger_Avatar;
-            this.pictureBox3.Location = new System.Drawing.Point(86, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(97, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(108, 75);
             this.pictureBox3.TabIndex = 4;
@@ -117,7 +117,7 @@ namespace Presentacion.Formularios
             this.lblAvatarJuli.AutoSize = true;
             this.lblAvatarJuli.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAvatarJuli.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAvatarJuli.Location = new System.Drawing.Point(386, 94);
+            this.lblAvatarJuli.Location = new System.Drawing.Point(399, 94);
             this.lblAvatarJuli.Name = "lblAvatarJuli";
             this.lblAvatarJuli.Size = new System.Drawing.Size(157, 16);
             this.lblAvatarJuli.TabIndex = 7;
@@ -126,7 +126,7 @@ namespace Presentacion.Formularios
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Presentacion.Properties.Resources.Ric_Avatar;
-            this.pictureBox4.Location = new System.Drawing.Point(254, 14);
+            this.pictureBox4.Location = new System.Drawing.Point(265, 14);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(108, 75);
             this.pictureBox4.TabIndex = 5;
@@ -137,7 +137,7 @@ namespace Presentacion.Formularios
             this.lblAvatarGer.AutoSize = true;
             this.lblAvatarGer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAvatarGer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAvatarGer.Location = new System.Drawing.Point(49, 92);
+            this.lblAvatarGer.Location = new System.Drawing.Point(62, 92);
             this.lblAvatarGer.Name = "lblAvatarGer";
             this.lblAvatarGer.Size = new System.Drawing.Size(139, 16);
             this.lblAvatarGer.TabIndex = 6;
@@ -154,14 +154,14 @@ namespace Presentacion.Formularios
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // FrmConocenos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(819, 447);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FrmConocenos";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
