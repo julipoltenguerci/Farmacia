@@ -17,5 +17,8 @@ namespace Servicios.Interfaces
 		//public List<object> GetByFilters(List<Parametro> parametros, Accion modo);
 		public List<Factura> GetFacturasByFilters(List<Parametro> parametros);
 		public DataTable GetFacturasAfiliados(List<Parametro> parametros);
-	}
+		public DataTable GetFacturasTipo(List<Parametro> parametros);
+		public DataTable GetCombo(string tabla);
+       
+    }
 }

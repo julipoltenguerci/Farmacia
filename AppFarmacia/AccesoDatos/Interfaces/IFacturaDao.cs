@@ -13,5 +13,8 @@ namespace AccesoDatos.Interfaces
 	{
 		List<Factura> GetByFilters(List<Parametro> parametros);
 		DataTable GetFacturasAfiliados(List<Parametro> parametros);
+		DataTable GetFacturasTipo(List<Parametro> parametros);
+	    DataTable GetCombo(string tabla);
+
 	}
 }

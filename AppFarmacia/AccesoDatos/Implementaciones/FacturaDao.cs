@@ -52,6 +52,26 @@ namespace AccesoDatos.Implementaciones
             return lst;
         }
 
+
+        public DataTable GetFacturasTipo(List<Parametro> parametros)
+        {
+
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                tabla = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_FACTURAS_TIPO", parametros);
+
+                return tabla;
+            }
+            catch (SqlException)
+            {
+                tabla = null;
+            }
+            return tabla;
+        }
+
+
         public DataTable GetFacturasAfiliados(List<Parametro> parametros)
         {
 
@@ -70,5 +90,21 @@ namespace AccesoDatos.Implementaciones
             return tabla;
         }
 
+        public DataTable GetCombo(string tabla)
+        {
+            DataTable table = new DataTable();
+
+            try
+            {
+                table = HelperDao.ObtenerInstancia().ConsultaSQLParametros("PA_CARGAR_COMBO", tabla);
+
+                return table;
+            }
+            catch (SqlException)
+            {
+                table = null;
+            }
+            return table;
+        }
     }
 }

@@ -17,7 +17,8 @@ namespace AccesoDatos
 		//public SqlCommand cmd { get; set; }
 		private HelperDao()
 		{
-			ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
+			ConnectionString = @"Data Source =DESKTOP-DUIDE87\SQLEXPRESS; Initial Catalog = Farmacia2; Integrated Security = True";
+			//ConnectionString = @"Data Source=NOTEBOOK-JERE\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
 			//ConnectionString = @"Data Source=LAPTOP-JULI\SQLEXPRESS;Initial Catalog=Farmaceutica;Integrated Security=True";
 			//cnn = new SqlConnection(ConnectionString);
 		}
@@ -61,5 +62,37 @@ namespace AccesoDatos
 
 			return tabla;
 		}
+
+
+
+		public DataTable ConsultaSQLParametros(string nombreSp, string nombreTabla)
+		{
+			DataTable tabla = new DataTable();
+			SqlConnection cnn = new SqlConnection(ConnectionString);
+			try
+			{
+				cnn.Open();
+				SqlCommand cmd = new SqlCommand(nombreSp, cnn);
+				cmd.Parameters.Clear();
+				cmd.CommandType = CommandType.Text;
+				cmd.CommandText = "select * from " + nombreTabla;
+				tabla.Load(cmd.ExecuteReader());
+
+			}
+			catch (Exception)
+			{
+				tabla = null;
+			}
+			finally
+			{
+				if (cnn.State == ConnectionState.Open) cnn.Close();
+			}
+
+			return tabla;
+		}
+
+
+
+
 	}
 }

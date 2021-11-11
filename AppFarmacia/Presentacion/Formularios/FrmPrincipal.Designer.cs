@@ -80,7 +80,9 @@ namespace Presentacion
             this.btnConocenos.TabIndex = 3;
             this.btnConocenos.Text = "   Conocenos";
             this.btnConocenos.UseVisualStyleBackColor = false;
+
             this.btnConocenos.Click += new System.EventHandler(this.btnConocenos_Click_1);
+
             // 
             // btnCerrarSesion
             // 
@@ -146,6 +148,7 @@ namespace Presentacion
             // 
             // button3
             // 
+
       this.button3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.button3.FlatAppearance.BorderSize = 0;
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -160,6 +163,7 @@ namespace Presentacion
 			this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button3.UseVisualStyleBackColor = false;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
+
             // 
             // button2
             // 
@@ -173,9 +177,12 @@ namespace Presentacion
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(176, 40);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Consulta 2";
+
+            this.button2.Text = "Facturas";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+
             // 
             // btnConsulta1
             // 
@@ -221,7 +228,7 @@ namespace Presentacion
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(999, 89);
             this.panelBar.TabIndex = 1;
-            //this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+
             // 
             // btnMinimize
             // 

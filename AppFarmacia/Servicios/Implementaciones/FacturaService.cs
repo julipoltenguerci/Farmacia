@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 using static Dominio.Enumeracion;
 
 namespace Servicios.Implementaciones
-{   
-	class FacturaService:IServiceFactura
+{
+	class FacturaService : IServiceFactura
 	{
 		private IFacturaDao dao;
 
@@ -23,7 +23,7 @@ namespace Servicios.Implementaciones
 		}
 
 		public List<Factura> GetFacturasByFilters(List<Parametro> parametros)
-		{   
+		{
 			return dao.GetByFilters(parametros);
 		}
 		public DataTable GetFacturasAfiliados(List<Parametro> parametros)
@@ -31,5 +31,14 @@ namespace Servicios.Implementaciones
 			return dao.GetFacturasAfiliados(parametros);
 		}
 
-	}
+		public DataTable GetFacturasTipo(List<Parametro> parametros)
+		{
+			return dao.GetFacturasTipo(parametros);
+		}
+
+		public DataTable GetCombo(string tabla)
+		{
+			return dao.GetCombo(tabla);
+		}
+    }
 }
