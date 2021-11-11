@@ -14,6 +14,6 @@ namespace AccesoDatos.Interfaces
         //List<object> GetByFilters(List<Parametro> parametro);
 
         List<Pedido> GetByFilters(List<Parametro> parametros);
-		List<TipoSuminstroDto> GetCantTipoSuministro(List<Parametro> parametros);
+		List<TipoSuministroDto> GetCantTipoSuministro(List<Parametro> parametros);
 	}
 }

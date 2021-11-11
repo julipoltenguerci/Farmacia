@@ -12,6 +12,6 @@ namespace Servicios.Interfaces
 	public interface IServicePedido
 	{
 		public List<Pedido> GetPedidosByFilters(List<Parametro> parametros);
-		public List<TipoSuminstroDto> CantTipoSuministro(List<Parametro> parametros);
+		public List<TipoSuministroDto> CantTipoSuministro(List<Parametro> parametros);
 	}
 }

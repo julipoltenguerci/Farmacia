@@ -147,14 +147,14 @@ namespace Presentacion
 			this.button3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.button3.FlatAppearance.BorderSize = 0;
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
 			this.button3.Location = new System.Drawing.Point(0, 80);
 			this.button3.Name = "button3";
 			this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.button3.Size = new System.Drawing.Size(176, 40);
 			this.button3.TabIndex = 3;
-			this.button3.Text = "Consulta 3";
+			this.button3.Text = "Cant Tipo Suministro";
 			this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button3.UseVisualStyleBackColor = false;
 			this.button3.Click += new System.EventHandler(this.button3_Click);

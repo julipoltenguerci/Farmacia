@@ -1,5 +1,5 @@
 
-use db_Farmacia
+use Farmaceutica
 go
 create table Provincias
 (
@@ -315,3 +315,97 @@ and year(fecha_factura)=year(@fechaFactura)
 and cant_desc >= @descuento
 
 go
+CREATE PROCEDURE PA_CONSULTA3_TIPO_SUMINISTRO
+@fechaDesde datetime=null,
+@fechaHasta datetime=null,
+@proveedor varchar(150)=null,
+@tipoSuministro varchar(150)=null,
+@tipo int=null,
+@agrupar int=null
+AS
+
+if @tipo=0 and @agrupar=0
+SELECT year(p.fecha_entrega) AS 'Anio', 
+month(p.fecha_entrega) AS 'Mes', 
+ts.tipo_suministro AS 'TipoSuministro',
+sum(dp.cantidad) AS 'CantidadTotal'
+FROM Suministros s
+JOIN Detalles_pedidos dp ON s.id_suministro=dp.id_suministro
+JOIN Tipos_suministros ts ON ts.id_tipo_sum=s.id_tipo_sum
+JOIN Pedidos p on dp.id_pedido=p.id_pedido
+JOIN Proveedores pv ON pv.id_proveedor=p.id_proveedor
+WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_entrega) > @fechaDesde AND convert(date,p.fecha_entrega) <= @fechaHasta))
+	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
+GROUP BY year(p.fecha_entrega), month(p.fecha_entrega),ts.tipo_suministro
+
+if @tipo=0 and @agrupar=1
+SELECT year(p.fecha_entrega) AS 'Anio', 
+ts.tipo_suministro AS 'TipoSuministro',
+sum(dp.cantidad) AS 'CantidadTotal'
+FROM Suministros s
+JOIN Detalles_pedidos dp ON s.id_suministro=dp.id_suministro
+JOIN Tipos_suministros ts ON ts.id_tipo_sum=s.id_tipo_sum
+JOIN Pedidos p on dp.id_pedido=p.id_pedido
+JOIN Proveedores pv ON pv.id_proveedor=p.id_proveedor
+WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_entrega) > @fechaDesde AND convert(date,p.fecha_entrega) <= @fechaHasta))
+	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
+GROUP BY year(p.fecha_entrega),ts.tipo_suministro
+
+if @tipo=0 and @agrupar=2
+SELECT nom_proveedor AS 'Proveedor',
+ts.tipo_suministro AS 'TipoSuministro',
+sum(dp.cantidad) AS 'CantidadTotal'
+FROM Suministros s
+JOIN Detalles_pedidos dp ON s.id_suministro=dp.id_suministro
+JOIN Tipos_suministros ts ON ts.id_tipo_sum=s.id_tipo_sum
+JOIN Pedidos p on dp.id_pedido=p.id_pedido
+JOIN Proveedores pv ON pv.id_proveedor=p.id_proveedor
+WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_entrega) > @fechaDesde AND convert(date,p.fecha_entrega) <= @fechaHasta))
+	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
+GROUP BY nom_proveedor,ts.tipo_suministro
+
+if @tipo=1 and @agrupar=0
+SELECT year(p.fecha_entrega) AS 'Anio', 
+month(p.fecha_entrega) AS 'Mes', 
+ts.tipo_suministro AS 'TipoSuministro',
+sum(dp.cantidad) AS 'CantidadTotal'
+FROM Suministros s
+JOIN Detalles_pedidos dp ON s.id_suministro=dp.id_suministro
+JOIN Tipos_suministros ts ON ts.id_tipo_sum=s.id_tipo_sum
+JOIN Pedidos p on dp.id_pedido=p.id_pedido
+JOIN Proveedores pv ON pv.id_proveedor=p.id_proveedor
+WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_entrega) > @fechaDesde AND convert(date,p.fecha_entrega) <= @fechaHasta))
+	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
+GROUP BY year(p.fecha_entrega), month(p.fecha_entrega),ts.tipo_suministro
+
+if @tipo=1 and @agrupar=1
+SELECT year(p.fecha_entrega) AS 'Anio',
+ts.tipo_suministro AS 'TipoSuministro',
+sum(dp.cantidad) AS 'CantidadTotal'
+FROM Suministros s
+JOIN Detalles_pedidos dp ON s.id_suministro=dp.id_suministro
+JOIN Tipos_suministros ts ON ts.id_tipo_sum=s.id_tipo_sum
+JOIN Pedidos p on dp.id_pedido=p.id_pedido
+JOIN Proveedores pv ON pv.id_proveedor=p.id_proveedor
+WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_entrega) > @fechaDesde AND convert(date,p.fecha_entrega) <= @fechaHasta))
+	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
+GROUP BY year(p.fecha_entrega),ts.tipo_suministro
+
+if @tipo=1 and @agrupar=2
+SELECT nom_proveedor AS 'Proveedor', 
+ts.tipo_suministro AS 'TipoSuministro',
+sum(dp.cantidad) AS 'CantidadTotal'
+FROM Suministros s
+JOIN Detalles_pedidos dp ON s.id_suministro=dp.id_suministro
+JOIN Tipos_suministros ts ON ts.id_tipo_sum=s.id_tipo_sum
+JOIN Pedidos p on dp.id_pedido=p.id_pedido
+JOIN Proveedores pv ON pv.id_proveedor=p.id_proveedor
+WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_entrega) > @fechaDesde AND convert(date,p.fecha_entrega) <= @fechaHasta))
+	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
+	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
+GROUP BY nom_proveedor,ts.tipo_suministro

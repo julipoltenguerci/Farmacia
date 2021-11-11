@@ -43,14 +43,14 @@ namespace AccesoDatos
 
 				foreach (Parametro p in parametros)
 				{
-					cmd.Parameters.AddWithValue(p.Nombre, p.Valor);
+					cmd.Parameters.AddWithValue(p.Nombre, p.Valor);					
 				}
 
 				tabla.Load(cmd.ExecuteReader());
 
 				
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
 				tabla = null;
 			}
