@@ -410,14 +410,14 @@ WHERE ((@fechaDesde is null and @fechaHasta is  null) OR (convert(date,p.fecha_e
 	AND (@Proveedor is null OR (nom_proveedor like '%' + @Proveedor + '%'))
 	AND (@tipoSuministro is null OR (ts.tipo_suministro like '%' + @tipoSuministro + '%'))
 GROUP BY nom_proveedor,ts.tipo_suministro
----------------------
+
 go
 Create PROCEDURE PA_CONSULTA_SUCURSAL
 @anio int=null,
 @sucursal varchar(50)=null
 AS  
        SELECT year(f.fecha_factura), s.nom_sucursal AS Sucursal,  
-		   SUM(df.precio_unitario*df.cant_suministro)/COUNT(distinct df.id_factura) AS 'Promedio de Facturación',
+		   SUM(df.precio_unitario*df.cant_suministro)/COUNT(distinct df.id_factura) AS 'Promedio de Facturaciï¿½n',
 		   SUM(df.precio_unitario*df.cant_suministro) AS Total
        FROM Facturas f JOIN Detalles_facturas df ON f.id_factura=df.id_factura
 				JOIN Sucursales s ON s.id_sucursal=f.id_sucursal
@@ -426,3 +426,24 @@ AS
 		     and (@sucursal is null OR (s.nom_sucursal like '%' + @sucursal + '%'))
        GROUP BY s.id_sucursal, s.nom_sucursal, year(f.fecha_factura)
 	   order by 1 asc
+
+go
+
+create proc PA_FACTURAS_TIPO
+@fechaDesde datetime=null,
+@fechaHasta datetime=null,
+@tipo int,
+@estado int
+as
+begin
+select f.id_factura 'Nro factura', cant_suministro*df.precio_unitario 'Total factura', IIF(estado = 1, 'Si','No') AS Autorizado,
+format(f.fecha_factura,'dd/MM/yyyy') 'Fecha fac', nom_suministros 'Nombre Suministro',ts.tipo_suministro 'Tipo suministro'
+from facturas f join Detalles_Facturas df on f.id_factura=df.id_factura
+join Suministros s on df.id_suministro=s.id_suministro
+join Tipos_Suministros ts on ts.id_tipo_sum=s.id_tipo_sum
+join Autorizaciones a on a.id_autorizacion=df.id_autorizacion
+where ts.id_tipo_sum=@tipo and estado=@estado
+AND((@fechaDesde is null and @fechaHasta is  null) OR
+(convert(date,fecha_factura) > @fechaDesde AND convert(date,fecha_factura) <= @fechaHasta))
+end
+

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion
+namespace Presentacion.Formularios
 {
 	static class Program
 	{
@@ -18,6 +18,7 @@ namespace Presentacion
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new FrmPrincipal());
+			
 		}
 	}
 }
