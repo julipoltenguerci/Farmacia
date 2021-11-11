@@ -30,6 +30,7 @@ namespace Presentacion.Formularios
         private void InitializeComponent()
         {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvConsultaFactura = new System.Windows.Forms.DataGridView();
 			this.cNroFac = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +69,14 @@ namespace Presentacion.Formularios
             this.cFecFac,
             this.cNombSuministro,
             this.cTipoSum});
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvConsultaFactura.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvConsultaFactura.Location = new System.Drawing.Point(12, 156);
 			this.dgvConsultaFactura.Name = "dgvConsultaFactura";
 			this.dgvConsultaFactura.ReadOnly = true;
