@@ -131,7 +131,8 @@ namespace Presentacion
         {
             OpenChildForm(new FrmConocenos(), sender);
             HideSubMenu();
-            
+            lblTipo.Visible = false;
+
         }
 
 

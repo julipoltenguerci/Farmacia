@@ -212,7 +212,7 @@ namespace Presentacion
 			this.lblTipo.AutoSize = true;
 			this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.lblTipo.ForeColor = System.Drawing.Color.White;
-			this.lblTipo.Location = new System.Drawing.Point(174, 43);
+			this.lblTipo.Location = new System.Drawing.Point(12, 56);
 			this.lblTipo.Name = "lblTipo";
 			this.lblTipo.Size = new System.Drawing.Size(58, 19);
 			this.lblTipo.TabIndex = 6;
