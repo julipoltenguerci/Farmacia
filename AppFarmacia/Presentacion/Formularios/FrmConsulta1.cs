@@ -54,18 +54,7 @@ namespace Presentacion.Formularios
             filtros.Add(new Parametro("@descuento", tkbDescuento.Value));
             filtros.Add(new Parametro("@idObraSocial", cboFiltroObraSocial.SelectedValue));
 
-
-            //List<Parametro> filtros = CargarParametros(Accion.Factura);
-
-            //dgvConsulta.Rows.Clear();
             dgvConsulta1.DataSource = gestor.GetFacturasAfiliados(filtros);
-
-
-            //foreach (Factura item in lst)
-            //{
-            //    dgvConsulta.Rows.Add(new object[] { item.IdFactura, item.Fecha.ToString("dd/MM/yyyy"), item.Cliente.ToString(), item.Total, ""/*item.GetFechaBajaFormato()*/ });
-            //}
-
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -97,13 +86,11 @@ namespace Presentacion.Formularios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            dgvConsulta1.DataSource = null;
-
+            var dt = (DataTable)dgvConsulta1.DataSource; 
+                       
+                dt.Rows.Clear();
+                dgvConsulta1.DataSource=dt;      
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

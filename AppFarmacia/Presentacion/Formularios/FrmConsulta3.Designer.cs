@@ -32,6 +32,11 @@ namespace Presentacion.Formularios
 			this.btnCancelar = new System.Windows.Forms.Button();
 			this.btnEliminarFiltro = new System.Windows.Forms.Button();
 			this.dgvConsulta = new System.Windows.Forms.DataGridView();
+			this.cAnio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cTipoSumin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cCantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.btnConsultar = new System.Windows.Forms.Button();
 			this.txtFiltro = new System.Windows.Forms.TextBox();
 			this.cboFiltro = new System.Windows.Forms.ComboBox();
@@ -43,15 +48,9 @@ namespace Presentacion.Formularios
 			this.cboFiltroFecha = new System.Windows.Forms.ComboBox();
 			this.lblFiltroFecha = new System.Windows.Forms.Label();
 			this.chkAnio = new System.Windows.Forms.CheckBox();
-			this.chkMes = new System.Windows.Forms.CheckBox();
-			this.chkTipoSum = new System.Windows.Forms.CheckBox();
+			this.chkAnioMes = new System.Windows.Forms.CheckBox();
 			this.chkProv = new System.Windows.Forms.CheckBox();
 			this.lblAgrupamiento = new System.Windows.Forms.Label();
-			this.cAnio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cMes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cTipoSumin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cCantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -94,6 +93,47 @@ namespace Presentacion.Formularios
 			this.dgvConsulta.Size = new System.Drawing.Size(785, 250);
 			this.dgvConsulta.TabIndex = 31;
 			// 
+			// cAnio
+			// 
+			this.cAnio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.cAnio.FillWeight = 203.0457F;
+			this.cAnio.HeaderText = "Año";
+			this.cAnio.Name = "cAnio";
+			this.cAnio.ReadOnly = true;
+			this.cAnio.Width = 54;
+			// 
+			// cMes
+			// 
+			this.cMes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.cMes.FillWeight = 68.08337F;
+			this.cMes.HeaderText = "Mes";
+			this.cMes.Name = "cMes";
+			this.cMes.ReadOnly = true;
+			this.cMes.Width = 54;
+			// 
+			// cProveedor
+			// 
+			this.cProveedor.HeaderText = "Proveedor";
+			this.cProveedor.Name = "cProveedor";
+			this.cProveedor.ReadOnly = true;
+			this.cProveedor.Visible = false;
+			// 
+			// cTipoSumin
+			// 
+			this.cTipoSumin.FillWeight = 64.13766F;
+			this.cTipoSumin.HeaderText = "Tipo Suministro";
+			this.cTipoSumin.Name = "cTipoSumin";
+			this.cTipoSumin.ReadOnly = true;
+			// 
+			// cCantTotal
+			// 
+			this.cCantTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.cCantTotal.FillWeight = 64.73328F;
+			this.cCantTotal.HeaderText = "Cantidad Total";
+			this.cCantTotal.Name = "cCantTotal";
+			this.cCantTotal.ReadOnly = true;
+			this.cCantTotal.Width = 108;
+			// 
 			// btnConsultar
 			// 
 			this.btnConsultar.Location = new System.Drawing.Point(644, 85);
@@ -102,6 +142,7 @@ namespace Presentacion.Formularios
 			this.btnConsultar.TabIndex = 26;
 			this.btnConsultar.Text = "Consultar";
 			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
 			// 
 			// txtFiltro
 			// 
@@ -118,6 +159,7 @@ namespace Presentacion.Formularios
 			this.cboFiltro.Name = "cboFiltro";
 			this.cboFiltro.Size = new System.Drawing.Size(223, 23);
 			this.cboFiltro.TabIndex = 24;
+			this.cboFiltro.SelectedIndexChanged += new System.EventHandler(this.cboFiltro_SelectedIndexChanged);
 			// 
 			// lblFiltro
 			// 
@@ -170,6 +212,7 @@ namespace Presentacion.Formularios
 			this.cboFiltroFecha.Name = "cboFiltroFecha";
 			this.cboFiltroFecha.Size = new System.Drawing.Size(223, 23);
 			this.cboFiltroFecha.TabIndex = 18;
+			this.cboFiltroFecha.SelectedIndexChanged += new System.EventHandler(this.cboFiltroFecha_SelectedIndexChanged);
 			// 
 			// lblFiltroFecha
 			// 
@@ -183,42 +226,35 @@ namespace Presentacion.Formularios
 			// chkAnio
 			// 
 			this.chkAnio.AutoSize = true;
-			this.chkAnio.Location = new System.Drawing.Point(110, 161);
+			this.chkAnio.Location = new System.Drawing.Point(201, 160);
 			this.chkAnio.Name = "chkAnio";
 			this.chkAnio.Size = new System.Drawing.Size(48, 19);
 			this.chkAnio.TabIndex = 34;
 			this.chkAnio.Text = "Año";
 			this.chkAnio.UseVisualStyleBackColor = true;
+			this.chkAnio.Click += new System.EventHandler(this.chkAnio_Click);
 			// 
-			// chkMes
+			// chkAnioMes
 			// 
-			this.chkMes.AutoSize = true;
-			this.chkMes.Location = new System.Drawing.Point(175, 161);
-			this.chkMes.Name = "chkMes";
-			this.chkMes.Size = new System.Drawing.Size(48, 19);
-			this.chkMes.TabIndex = 35;
-			this.chkMes.Text = "Mes";
-			this.chkMes.UseVisualStyleBackColor = true;
-			// 
-			// chkTipoSum
-			// 
-			this.chkTipoSum.AutoSize = true;
-			this.chkTipoSum.Location = new System.Drawing.Point(240, 161);
-			this.chkTipoSum.Name = "chkTipoSum";
-			this.chkTipoSum.Size = new System.Drawing.Size(109, 19);
-			this.chkTipoSum.TabIndex = 36;
-			this.chkTipoSum.Text = "Tipo Suministro";
-			this.chkTipoSum.UseVisualStyleBackColor = true;
+			this.chkAnioMes.AutoSize = true;
+			this.chkAnioMes.Location = new System.Drawing.Point(108, 160);
+			this.chkAnioMes.Name = "chkAnioMes";
+			this.chkAnioMes.Size = new System.Drawing.Size(82, 19);
+			this.chkAnioMes.TabIndex = 35;
+			this.chkAnioMes.Text = "Año y Mes";
+			this.chkAnioMes.UseVisualStyleBackColor = true;
+			this.chkAnioMes.Click += new System.EventHandler(this.chkAnioMes_Click);
 			// 
 			// chkProv
 			// 
 			this.chkProv.AutoSize = true;
-			this.chkProv.Location = new System.Drawing.Point(366, 161);
+			this.chkProv.Location = new System.Drawing.Point(260, 160);
 			this.chkProv.Name = "chkProv";
 			this.chkProv.Size = new System.Drawing.Size(80, 19);
 			this.chkProv.TabIndex = 37;
 			this.chkProv.Text = "Proveedor";
 			this.chkProv.UseVisualStyleBackColor = true;
+			this.chkProv.Click += new System.EventHandler(this.chkProv_Click);
 			// 
 			// lblAgrupamiento
 			// 
@@ -229,47 +265,6 @@ namespace Presentacion.Formularios
 			this.lblAgrupamiento.TabIndex = 38;
 			this.lblAgrupamiento.Text = "Tipo Agrupamiento";
 			// 
-			// cAnio
-			// 
-			this.cAnio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.cAnio.FillWeight = 203.0457F;
-			this.cAnio.HeaderText = "Año";
-			this.cAnio.Name = "cAnio";
-			this.cAnio.ReadOnly = true;
-			this.cAnio.Width = 54;
-			// 
-			// cMes
-			// 
-			this.cMes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.cMes.FillWeight = 68.08337F;
-			this.cMes.HeaderText = "Mes";
-			this.cMes.Name = "cMes";
-			this.cMes.ReadOnly = true;
-			this.cMes.Width = 54;
-			// 
-			// cProveedor
-			// 
-			this.cProveedor.HeaderText = "Proveedor";
-			this.cProveedor.Name = "cProveedor";
-			this.cProveedor.ReadOnly = true;
-			this.cProveedor.Visible = false;
-			// 
-			// cTipoSumin
-			// 
-			this.cTipoSumin.FillWeight = 64.13766F;
-			this.cTipoSumin.HeaderText = "Tipo Suministro";
-			this.cTipoSumin.Name = "cTipoSumin";
-			this.cTipoSumin.ReadOnly = true;
-			// 
-			// cCantTotal
-			// 
-			this.cCantTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.cCantTotal.FillWeight = 64.73328F;
-			this.cCantTotal.HeaderText = "Cantidad Total";
-			this.cCantTotal.Name = "cCantTotal";
-			this.cCantTotal.ReadOnly = true;
-			this.cCantTotal.Width = 108;
-			// 
 			// FrmConsulta3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -277,8 +272,7 @@ namespace Presentacion.Formularios
 			this.ClientSize = new System.Drawing.Size(809, 447);
 			this.Controls.Add(this.lblAgrupamiento);
 			this.Controls.Add(this.chkProv);
-			this.Controls.Add(this.chkTipoSum);
-			this.Controls.Add(this.chkMes);
+			this.Controls.Add(this.chkAnioMes);
 			this.Controls.Add(this.chkAnio);
 			this.Controls.Add(this.btnCancelar);
 			this.Controls.Add(this.btnEliminarFiltro);
@@ -318,8 +312,7 @@ namespace Presentacion.Formularios
 		private System.Windows.Forms.ComboBox cboFiltroFecha;
 		private System.Windows.Forms.Label lblFiltroFecha;
 		private System.Windows.Forms.CheckBox chkAnio;
-		private System.Windows.Forms.CheckBox chkMes;
-		private System.Windows.Forms.CheckBox chkTipoSum;
+		private System.Windows.Forms.CheckBox chkAnioMes;
 		private System.Windows.Forms.CheckBox chkProv;
 		private System.Windows.Forms.Label lblAgrupamiento;
 		private System.Windows.Forms.DataGridViewTextBoxColumn cAnio;

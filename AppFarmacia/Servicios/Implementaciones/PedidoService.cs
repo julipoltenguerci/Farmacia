@@ -21,7 +21,7 @@ namespace Servicios.Implementaciones
 			dao = factory.CrearPedidoDao();
 		}
 
-		public List<TipoSuminstroDto> CantTipoSuministro(List<Parametro> parametros)
+		public List<TipoSuministroDto> CantTipoSuministro(List<Parametro> parametros)
 		{
 			return dao.GetCantTipoSuministro(parametros);
 		}
