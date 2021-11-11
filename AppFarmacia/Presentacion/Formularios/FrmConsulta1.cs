@@ -24,6 +24,12 @@ namespace Presentacion.Formularios
             InitializeTrackBar();
             CargarObrasSociales();
             gestor = new ServiceFactoryImp().CrearFacturaService(new DaoFactoryImp());
+            dtpFechaDesde.Format = DateTimePickerFormat.Custom;
+            dtpFechaDesde.CustomFormat = "yyyy";
+            dtpFechaDesde.ShowUpDown = true;
+            dtpFechaHasta.Format = DateTimePickerFormat.Custom;
+            dtpFechaHasta.CustomFormat = "yyyy";
+            dtpFechaHasta.ShowUpDown = true;
         }
         private void InitializeTrackBar()
         {
@@ -43,22 +49,12 @@ namespace Presentacion.Formularios
         private void CargarGrilla()
         {
             List<Parametro> filtros = new List<Parametro>();
-            filtros.Add(new Parametro("@fechaFactura", dtpFechaFactura.Value));
+            filtros.Add(new Parametro("@fechaDesde", dtpFechaDesde.Value));
+            filtros.Add(new Parametro("@fechaHasta", dtpFechaHasta.Value));
             filtros.Add(new Parametro("@descuento", tkbDescuento.Value));
             filtros.Add(new Parametro("@idObraSocial", cboFiltroObraSocial.SelectedValue));
 
-
-            //List<Parametro> filtros = CargarParametros(Accion.Factura);
-
-            //dgvConsulta.Rows.Clear();
             dgvConsulta1.DataSource = gestor.GetFacturasAfiliados(filtros);
-
-
-            //foreach (Factura item in lst)
-            //{
-            //    dgvConsulta.Rows.Add(new object[] { item.IdFactura, item.Fecha.ToString("dd/MM/yyyy"), item.Cliente.ToString(), item.Total, ""/*item.GetFechaBajaFormato()*/ });
-            //}
-
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -72,14 +68,29 @@ namespace Presentacion.Formularios
             oSociales.Add(new ObraSocial(1, "Osde"));
             oSociales.Add(new ObraSocial(2, "Swiss Medical"));
             oSociales.Add(new ObraSocial(3, "Daspu"));
+            oSociales.Add(new ObraSocial(4, "Sancor Salud"));
+            oSociales.Add(new ObraSocial(5, "Galeno"));
+            oSociales.Add(new ObraSocial(6, "Medifé"));
+            oSociales.Add(new ObraSocial(7, "Federada Salud"));
+            oSociales.Add(new ObraSocial(8, "Omint"));
+            oSociales.Add(new ObraSocial(9, "Prevención Salud"));
+            oSociales.Add(new ObraSocial(10, "Aca Salud"));
 
 
-            //oSociales.Add(2, "Medife");
             cboFiltroObraSocial.Items.Clear();
             cboFiltroObraSocial.DisplayMember = "NomObraSocial";
             cboFiltroObraSocial.ValueMember = "IdObraSocial";
             cboFiltroObraSocial.DataSource = oSociales;
             cboFiltroObraSocial.SelectedItem = 1;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var dt = (DataTable)dgvConsulta1.DataSource; 
+                       
+                dt.Rows.Clear();
+                dgvConsulta1.DataSource=dt;      
+        }
+
     }
 }
