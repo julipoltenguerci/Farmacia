@@ -52,9 +52,9 @@ namespace AccesoDatos.Implementaciones
 			return lst;
 		}
 
-		public List<TipoSuminstroDto> GetCantTipoSuministro(List<Parametro> parametros)
+		public List<TipoSuministroDto> GetCantTipoSuministro(List<Parametro> parametros)
 		{
-			List<TipoSuminstroDto> lst = new List<TipoSuminstroDto>();
+			List<TipoSuministroDto> lst = new List<TipoSuministroDto>();
 
 			try
 			{
@@ -62,14 +62,47 @@ namespace AccesoDatos.Implementaciones
 				//falta terminar el sp
 				foreach (DataRow row in tabla.Rows)
 				{
-					TipoSuminstroDto tipoSuminstroDto = new TipoSuminstroDto();
+					TipoSuministroDto tipoSuminstroDto = new TipoSuministroDto();
 
-					tipoSuminstroDto.Anio = Convert.ToInt32(row["Anio"].ToString());
-					tipoSuminstroDto.Mes = Convert.ToInt32(row["Mes"].ToString());
+					if (tabla.Columns.Contains("Anio"))
+					{
+						if (!row["Anio"].ToString().Equals(DBNull.Value))
+						{
+							tipoSuminstroDto.Anio = Convert.ToInt32(row["Anio"].ToString());
+						}
+						else
+						{
+							tipoSuminstroDto.Anio = 0;
+						}
+					}
+					if (tabla.Columns.Contains("Mes"))
+					{
+						if (!row["Mes"].ToString().Equals(DBNull.Value))
+						{
+							tipoSuminstroDto.Mes = Convert.ToInt32(row["Mes"].ToString());
+						}
+						else
+						{
+							tipoSuminstroDto.Mes = 0;
+						}
+					}					
+					if (tabla.Columns.Contains("Proveedor"))
+					{
+						if (!row["Proveedor"].ToString().Equals(DBNull.Value))
+						{
+							tipoSuminstroDto.NombreProveedor = row["Proveedor"].ToString();
+						}
+						else
+						{
+							tipoSuminstroDto.NombreProveedor = "";
+						}
+					}
+
+
 					tipoSuminstroDto.TipoSuministro = row["TipoSuministro"].ToString();
 					tipoSuminstroDto.CantTipoSuministro = Convert.ToInt32(row["CantidadTotal"].ToString());
-					
 
+					
 					lst.Add(tipoSuminstroDto);
 				}
 			}
@@ -77,6 +110,7 @@ namespace AccesoDatos.Implementaciones
 			{
 				lst = null;
 			}
+
 			return lst;
 		}
 	}
